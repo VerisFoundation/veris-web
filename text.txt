@@ -1,0 +1,57 @@
+
+Our Team
+Chris Plance
+FOUNDER
+Chris is an engineer, entrepreneur, and management consultant
+with over 20 years experience providing strategic guidance in the
+implementation of technology with a focus on healthcare.
+Chris was the co-founder of DATUS in 2002, a successful
+management consultancy spun off to employees in 2012. Chris has
+also served as the senior strategic advisor to one of the largest
+non-profit providers of senior living in the United States.
+
+Eric lawlor
+ADVISOR
+Eric has over 24 years of experience in numerous business lines in
+the healthcare industry. This experience includes over 20 years in
+some facet of the revenue cycle for a wide variety of provider types.
+These provider types range from hospitals and physician practices
+to post acute providers.
+Eric has personally performed all the major components of the
+provider side of revenue cycle in his career including eligibility
+verification, charge entry, claim submission, claim followup, claim
+appeals and post payment reviews. Eric has also been instrumental
+in the implementation of several new billing systems.
+
+FAQ
+Q: What is veris building and how?
+Veris is building a blockchain with a set of smart contracts designed specifically to service the
+healthcare industry.
+Blockchain provides four key fundamentals which sets this solution aside from existing attempts
+to address this with 'clearinghouse' type organizations:
+1. Disintermediation - No central agent is required to approve transactions.
+2. Immutability - All transactions can not not be altered or deleted once added to the chain via
+consensus.
+3. Reliability - All nodes contain a copy of the blockchain data, removing a central point of failure.
+4. Transparency - The transactions in the blockchain are visible to all parties with appropriate
+access to decrypt and review.
+
+Q: Why is Veris a non-profit entity?
+We feel strongly that the only effective way to solve the challenges in back -end
+administrative expense in the American healthcare system is that the
+characteristics of the organization itself must match the blockchain as best
+possible. The best current business entity for this is a non profit.
+A non-profit business structure requires transparency and stakeholder feedback
+via a board of directors comprised of healthcare payers, providers and financial
+institutions
+
+Q: What is the role of the Veris Foundation?
+The Veris Foundation provides the strong governance mechanism required for the
+continuing development and maintenance of a blockchain. The Foundation is also a
+structure that allows industry stakeholders to collaborate and drive down expenses
+while meeting their common needs.
+
+Q: How is Veris Funded?
+Veris is initially funded via donations from the founder and key private parties. Once an
+inital deployment of the solution occurs in the fall of 2017, an Initial Coin Offering will be
+created to further fund Veris.

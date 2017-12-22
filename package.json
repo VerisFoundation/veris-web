@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.0",
+    "@fortawesome/fontawesome-free-brands": "^5.0.2"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "autoprefixer": "^7",
+    "brunch": "^2",
+    "postcss-brunch": "^2"
+  }
+}
