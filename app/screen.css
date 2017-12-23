@@ -69,11 +69,37 @@ header nav .whitepaper a {
   }
 }
 
+body > header {
+  box-sizing: border-box;
+  padding: 2em;
+  max-width: 960px;
+  border-bottom: 2px solid #efefef;
+  margin: auto;
+}
+
+body > header nav a:link,
+body > header nav a:visited {
+  color: #303030;
+}
+
+body > header nav .whitepaper {
+  background-color: #008bca;
+}
+
+body > header nav .whitepaper a:link,
+body > header nav .whitepaper a:visited {
+  color: white;
+}
+
+body > header nav li.active {
+  border-bottom: 2px solid rgba(0, 139, 202, 0.5);
+}
+
 .hero {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   color: white;
   clip-path: ellipse(150% 50% at 50% 47%);
@@ -108,6 +134,7 @@ header nav .whitepaper a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .hero .call-to-action li {
@@ -142,7 +169,6 @@ header nav .whitepaper a {
 
 @media (min-width: 32em) {
   .hero h1 {
-    margin-top: -1em;
     font-size: 2.5em;
   }
 
@@ -157,10 +183,12 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+section + section {
   border-top: 2px solid #e5e5e5;
 }
 
-.hero + section,
 section.whitepaper {
   border-top: none;
 }
@@ -193,7 +221,7 @@ section.intro-video iframe {
 }
 
 section.info {
-  min-height: 50vh;
+  min-height: 40vh;
   padding: 2em;
 }
 
@@ -226,6 +254,7 @@ section aside {
 section.info img {
   flex: 1;
   margin: 2em;
+  object-fit: contain;
 }
 
 section.whitepaper {
@@ -287,21 +316,64 @@ section.whitepaper form button[type='submit'] {
   min-width: 8em;
 }
 
+section.question {
+  align-items: flex-start;
+  max-width: 640px;
+  margin: auto;
+}
+
+section.question h2 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+section.question abbr {
+  text-decoration: none;
+  color: #008bca;
+}
+
+main {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 960px;
+  padding: 1em;
+}
+
+main h1 {
+  margin: 1.5em 0;
+}
+
+main h1:after {
+  width: 10px;
+  background: #008bca;
+  height: 4px;
+  width: 2em;
+  content: '';
+  display: block;
+  position: relative;
+  bottom: -0.5em;
+}
+
 footer {
   background-color: #efefef;
   font-size: 0.8em;
   padding: 2em;
+}
+
+footer .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 960px;
+  margin: auto;
 }
 
 footer figure {
   margin: 0;
 }
 
-footer > div,
+footer .content > div,
 footer nav {
   flex: 1;
 }
@@ -338,7 +410,7 @@ footer nav a:visited {
     flex-direction: column;
   }
 
-  footer > div {
+  footer .content > div {
     text-align: center;
     order: 1;
   }
