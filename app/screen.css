@@ -283,48 +283,15 @@ section.whitepaper h2 {
 
 section.whitepaper form {
   margin: 2em;
-  flex: 1;
-}
-
-section.whitepaper form > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-section.whitepaper form p {
-  margin: 1em;
-  flex: 1;
 }
 
 section.whitepaper form label {
-  display: block;
   color: white;
 }
 
-section.whitepaper form input {
-  font-family: Raleway, sans-serif;
-  font-size: 1em;
-  border-radius: 0.2em;
-  border: none;
-  padding: 0.5em;
-  min-width: 8em;
-  width: calc(100% - 1em);
-}
-
 section.whitepaper form button[type='submit'] {
-  font-family: Raleway, sans-serif;
   color: #008bca;
-  font-weight: bold;
-  text-transform: lowercase;
-  font-variant: small-caps;
-  font-size: 1em;
-  padding: 0 1em;
   background-color: white;
-  border: none;
-  border-radius: 1em;
-  height: 2em;
-  min-width: 8em;
 }
 
 section.question {
@@ -341,6 +308,22 @@ section.question h2 {
 section.question abbr {
   text-decoration: none;
   color: #008bca;
+}
+
+section.contact .content {
+  align-items: flex-start;
+}
+
+section.contact aside:first-child p {
+  margin-top: 0;
+}
+
+section.contact aside {
+  margin: 0 1em;
+}
+
+section.contact iframe {
+  width: 100%;
 }
 
 main {
@@ -363,6 +346,54 @@ main h1:after {
   display: block;
   position: relative;
   bottom: -0.5em;
+}
+
+form {
+  flex: 1;
+}
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+form p {
+  margin: 1em 0;
+  flex: 1;
+}
+
+form label {
+  display: block;
+  color: #008bca;
+}
+
+form input,
+form textarea {
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+  font-size: 1em;
+  border-radius: 0.2em;
+  border: none;
+  padding: 0.5em;
+  min-width: 8em;
+  width: 100%;
+  border: 2px solid #008bca;
+}
+
+form button[type='submit'] {
+  font-family: Raleway, sans-serif;
+  color: white;
+  font-weight: bold;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 1em;
+  padding: 0 1em;
+  background-color: #008bca;
+  border: none;
+  border-radius: 1em;
+  height: 2em;
+  min-width: 8em;
 }
 
 footer {
