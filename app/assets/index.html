@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90235032-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', 'UA-90235032-1')
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Reducing Healthcare Expense" />
+  <meta name="author" content="verisfoundation.com" />
   <title>Veris Foundation</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
   <link rel="stylesheet" href="/app.css">
@@ -105,18 +116,20 @@
         </p>
       </aside>
       <form>
+        <input type="hidden" name="subject" value="Veris Whitepaper Request">
+        <input type="hidden" name="message" value="I'd like to know more about the Veris Foundation.">
         <div>
           <p>
-            <label for="given-name">First Name</label>
-            <input type="text" name="given-name">
+            <label for="givenName">First Name</label>
+            <input type="text" name="givenName">
           </p>
           <p>
-            <label for="family-name">Last Name</label>
-            <input type="text" name="family-name">
+            <label for="familyName">Last Name</label>
+            <input type="text" name="familyName">
           </p>
           <p>
-            <label for="email">Email</label>
-            <input type="email" name="email">
+            <label for="emailAddress">Email</label>
+            <input type="email" name="emailAddress">
           </p>
         </div>
         <p>
