@@ -464,7 +464,7 @@ form textarea {
   border: 2px solid #008bca;
 }
 
-form button[type='submit'] {
+button[type='submit'] {
   font-family: Raleway, sans-serif;
   color: white;
   font-weight: bold;
@@ -566,4 +566,29 @@ footer nav a:visited {
             justify-content: center;
     margin-bottom: 2em;
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .dialog {
+  background-color: white;
+  border-radius: 4px;
+  padding: 1em;
+  text-align: center;
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
 }
