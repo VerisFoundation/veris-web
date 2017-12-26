@@ -213,6 +213,11 @@ section.intro-video {
 section.intro-video h2,
 section.intro-video p {
   max-width: 640px;
+  margin-bottom: 0px;
+}
+
+section.intro-video p {
+  line-height: 1.5em;
 }
 
 section.intro-video iframe {
@@ -221,7 +226,7 @@ section.intro-video iframe {
 }
 
 section.info {
-  min-height: 40vh;
+  min-height: 55vh;
   padding: 2em;
 }
 
@@ -234,11 +239,17 @@ section.info .content {
   align-items: center;
 }
 
+section.info .content p {
+  line-height: 1.5em;
+}
+
 section.info label {
   font-weight: 700;
   color: #008bca;
   text-transform: lowercase;
   font-variant: small-caps;
+  letter-spacing: 2px;
+  line-height: 2em;
 }
 
 section.info h2 {
