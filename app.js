@@ -1983,65 +1983,68 @@ return api$1;
   })();
 });
 require.register("main.js", function(exports, require, module) {
-const fontawesome = require('@fortawesome/fontawesome')
-const faTwitter = require('@fortawesome/fontawesome-free-brands/faTwitter')
-const faMediumM = require('@fortawesome/fontawesome-free-brands/faMediumM')
-const faSlackHash = require('@fortawesome/fontawesome-free-brands/faSlackHash')
-const faGoogle = require('@fortawesome/fontawesome-free-brands/faGoogle')
-const faLinkedinIn = require('@fortawesome/fontawesome-free-brands/faLinkedinIn')
-const faGithub = require('@fortawesome/fontawesome-free-brands/faGithub')
+'use strict';
 
-fontawesome.library.add(faTwitter)
-fontawesome.library.add(faMediumM)
-fontawesome.library.add(faSlackHash)
-fontawesome.library.add(faGoogle)
-fontawesome.library.add(faLinkedinIn)
-fontawesome.library.add(faGithub)
+var fontawesome = require('@fortawesome/fontawesome');
+var faTwitter = require('@fortawesome/fontawesome-free-brands/faTwitter');
+var faMediumM = require('@fortawesome/fontawesome-free-brands/faMediumM');
+var faSlackHash = require('@fortawesome/fontawesome-free-brands/faSlackHash');
+var faGoogle = require('@fortawesome/fontawesome-free-brands/faGoogle');
+var faLinkedinIn = require('@fortawesome/fontawesome-free-brands/faLinkedinIn');
+var faGithub = require('@fortawesome/fontawesome-free-brands/faGithub');
 
-const FORM_QUERY = 'input[type=text], input[type=email], textarea, form button[type=submit]'
+fontawesome.library.add(faTwitter);
+fontawesome.library.add(faMediumM);
+fontawesome.library.add(faSlackHash);
+fontawesome.library.add(faGoogle);
+fontawesome.library.add(faLinkedinIn);
+fontawesome.library.add(faGithub);
 
-const showModal = () => (document.querySelector('.modal').style.display = 'flex')
+var FORM_QUERY = 'input[type=text], input[type=email], textarea';
 
-const hideModal = () => (document.querySelector('.modal').style.display = 'none')
+var showModal = function showModal() {
+  return document.querySelector('.modal').style.visibility = 'visible';
+};
 
-const disableForm = () => document.querySelectorAll(FORM_QUERY).forEach(el => (el.disabled = true))
+var hideModal = function hideModal() {
+  return document.querySelector('.modal').style.visibility = 'hidden';
+};
 
-const resetForm = () =>
-  document.querySelectorAll(FORM_QUERY).forEach(el => {
-    el.value = ''
-    el.disabled = false
-  })
+var resetForm = function resetForm() {
+  return document.querySelectorAll(FORM_QUERY).forEach(function (el) {
+    return el.value = '';
+  });
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-  const modalButton = document.querySelector('.modal button')
-  if (modalButton) modalButton.addEventListener('click', hideModal)
+document.addEventListener('DOMContentLoaded', function () {
+  var modalButton = document.querySelector('.modal button');
+  if (modalButton) modalButton.addEventListener('click', hideModal);
 
-  const form = document.querySelector('form')
+  var form = document.querySelector('form');
   if (form) {
-    form.addEventListener('submit', event => {
-      showModal()
-      event.preventDefault()
-      const data = {}
-      const formData = new FormData(form)
-      formData.forEach((value, key) => (data[key] = value))
-      window
-        .fetch('https://veris-contact-mailer.azurewebsites.net/api/HttpTrigger', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(resetForm)
-      showModal()
-      disableForm()
-    })
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      showModal();
+      var data = {};
+      var formData = new FormData(form);
+      formData.forEach(function (value, key) {
+        return data[key] = value;
+      });
+      window.fetch('https://veris-contact-mailer.azurewebsites.net/api/HttpTrigger', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(resetForm);
+    });
   }
-})
+});
 
 });
 
-;require.register("___globals___", function(exports, require, module) {
+require.register("___globals___", function(exports, require, module) {
   
 });})();require('___globals___');
 
+require('main');
