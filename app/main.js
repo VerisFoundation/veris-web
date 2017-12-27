@@ -13,19 +13,13 @@ fontawesome.library.add(faGoogle)
 fontawesome.library.add(faLinkedinIn)
 fontawesome.library.add(faGithub)
 
-const FORM_QUERY = 'input[type=text], input[type=email], textarea, form button[type=submit]'
+const FORM_QUERY = 'input[type=text], input[type=email], textarea'
 
-const showModal = () => (document.querySelector('.modal').style.display = 'flex')
+const showModal = () => (document.querySelector('.modal').style.visibility = 'visible')
 
-const hideModal = () => (document.querySelector('.modal').style.display = 'none')
+const hideModal = () => (document.querySelector('.modal').style.visibility = 'hidden')
 
-const disableForm = () => document.querySelectorAll(FORM_QUERY).forEach(el => (el.disabled = true))
-
-const resetForm = () =>
-  document.querySelectorAll(FORM_QUERY).forEach(el => {
-    el.value = ''
-    el.disabled = false
-  })
+const resetForm = () => document.querySelectorAll(FORM_QUERY).forEach(el => (el.value = ''))
 
 document.addEventListener('DOMContentLoaded', () => {
   const modalButton = document.querySelector('.modal button')
@@ -34,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form')
   if (form) {
     form.addEventListener('submit', event => {
-      showModal()
       event.preventDefault()
+      showModal()
       const data = {}
       const formData = new FormData(form)
       formData.forEach((value, key) => (data[key] = value))
@@ -48,8 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         })
         .then(resetForm)
-      showModal()
-      disableForm()
     })
   }
 })

@@ -103,8 +103,7 @@ body > header nav li.active {
   text-align: center;
   color: white;
   clip-path: ellipse(150% 50% at 50% 47%);
-  background: url('/images/graph.svg') no-repeat,
-    linear-gradient(-45deg, #008bca 0%, #4da6cc 100%);
+  background: url('/images/graph.svg') no-repeat, linear-gradient(-45deg, #008bca 0%, #4da6cc 100%);
   background-position: center 160%;
   background-size: 200vh, auto;
   padding: 2em;
@@ -263,7 +262,7 @@ section aside {
 }
 
 section.info img {
-  flex: 1;
+  /* flex: 1; */
   margin: 2em;
   object-fit: contain;
 }
@@ -331,6 +330,7 @@ main {
   margin: auto;
   max-width: 960px;
   padding: 1em;
+  display: block; /* IE hack */
 }
 
 main h1 {
@@ -359,8 +359,8 @@ form > div {
 }
 
 form p {
-  margin: 1em 0;
-  flex: 1;
+  margin: 1em;
+  /* flex: 1;  Breaks in IE 11*/
 }
 
 form label {
@@ -470,9 +470,10 @@ footer nav a:visited {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .modal .dialog {
