@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "brunch watch --server",
+    "start": "brunch watch --server --network",
     "build": "brunch build --production",
     "stage": "surge ./public -d functional-crowd.surge.sh",
     "prestage": "yarn build",
@@ -15,6 +15,7 @@
   "devDependencies": {
     "auto-reload-brunch": "^2",
     "autoprefixer": "^7",
+    "babel-brunch": "github:babel/babel-brunch",
     "brunch": "^2.10.12",
     "gh-pages": "^1.1.0",
     "postcss-brunch": "^2"
