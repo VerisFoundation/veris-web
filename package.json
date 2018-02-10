@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.158",
+    "gatsby-link": "^1.6.34",
+    "gatsby-plugin-styled-components": "^2.0.5",
+    "gatsby-plugin-typography": "^1.7.13",
+    "styled-components": "^3.1.6"
+  }
+}
