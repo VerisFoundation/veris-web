@@ -1,7 +1,7 @@
 import Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: '18px',
+  baseFontSize: '16px',
   bodyColor: '#0F3552',
   googleFonts: [
     {
@@ -10,7 +10,7 @@ const typography = new Typography({
     },
     {
       name: 'Open Sans',
-      styles: ['400', '700']
+      styles: ['300', '400', '700']
     }
   ],
   headerFontFamily: ['Raleway', 'sans-serif'],
