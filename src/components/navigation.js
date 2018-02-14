@@ -13,7 +13,6 @@ const Navigation = styled.nav`
   width: 100%;
   padding: 1rem;
   font-size: 0.9rem;
-  z-index: 100;
 
   ul {
     display: flex;
@@ -31,7 +30,7 @@ const Navigation = styled.nav`
   }
 
   span {
-    border-top: 0.3rem solid #278CD6;
+    border-top: 0.3rem solid #278cd6;
     display: block;
     background-color: hsla(205, 69%, 49%, 0.12);
     padding: 1rem;

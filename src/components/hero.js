@@ -13,7 +13,8 @@ const Hero = styled.div`
   background-size: cover;
   color: white;
   clip-path: ellipse(150% 50% at 50% 47%);
-  min-height: 100vh;
+  min-height: 60vh;
+  padding-bottom: 2rem;
 `
 
 const Section = styled(Container)`
@@ -36,8 +37,8 @@ const Countdown = styled.div`
   justify-content: center;
   padding: 1rem 2rem;
   min-width: 320px;
-  border: thin solid hsla(0, 100%, 100%, 0.42);
-  background-color: hsla(0, 100%, 100%, 0.10);
+  border: 0.1rem solid hsla(0, 100%, 100%, 0.42);
+  background-color: hsla(0, 100%, 100%, 0.1);
 
   h2 {
     border-bottom: 0.1rem solid hsla(0, 100%, 100%, 0.42);
@@ -54,10 +55,10 @@ const Countdown = styled.div`
 
 const HeroButton = Button.extend`
   background-color: transparent;
-  border: 0.1rem solid #278CD6;
+  border: 0.1rem solid #278cd6;
 
   span {
-    color: #278CD6;
+    color: #278cd6;
     padding-left: 1rem;
   }
 `
