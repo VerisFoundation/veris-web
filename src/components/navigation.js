@@ -76,7 +76,7 @@ export default ({ hero }) => (
         </span>
         <ul>
           <li>
-            <Link to="/">How it works</Link>
+            <Link to="/works">How it works</Link>
           </li>
           <li>
             <Link to="/faq">FAQ</Link>
@@ -96,24 +96,24 @@ export default ({ hero }) => (
             <Link to="/team">Team</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </li>
       <li>
         <span>
-          <Link to="/">Whitepaper</Link>
+          <Link to="/#whitepaper">Whitepaper</Link>
         </span>
       </li>
       <li>
         <span>
-          <Link to="/">Blog</Link>
+          <a href="https://medium.com/verisfoundation">Blog</a>
         </span>
       </li>
     </ul>
     <ul>
       <li>
-        <a href="https://ico.verisfoundation.com">Presale</a>
+        <Link to="/presale">Presale</Link>
       </li>
     </ul>
   </Navigation>

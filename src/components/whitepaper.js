@@ -75,7 +75,7 @@ const WhitepaperButton = styled(Button)`
 `
 
 export default () => (
-  <Whitepaper>
+  <Whitepaper id="whitepaper">
     <WhitepaperContainer>
       <aside>
         <img src={whitepaperIcon} alt="Whitepaper Icon" width="92" />

@@ -32,21 +32,6 @@ const Crowdsale = styled.div`
   }
 `
 
-const Questions = styled.div`
-  border-top: thin solid #d8d8d9;
-  border-bottom: thin solid #d8d8d9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;
-  margin-bottom: 4rem;
-
-  h3 {
-    font-size: 1.8rem;
-    margin: 1rem;
-  }
-`
-
 export default () => (
   <Container>
     <Crowdsale>
@@ -59,10 +44,5 @@ export default () => (
         <Button>Learn More</Button>
       </aside>
     </Crowdsale>
-
-    <Questions>
-      <h3>Have any questions?</h3>
-      <Button>Read our FAQ</Button>
-    </Questions>
   </Container>
 )
