@@ -79,7 +79,7 @@ export default () => (
         <SocialLink url="https://twitter.com/verisfoundation" icon={faTwitter} />
         <SocialLink url="https://medium.com/verisfoundation" icon={faMediumM} />
         <SocialLink url="https://verisfoundation.slack.com" icon={faSlackHash} />
-        <SocialLink url="#" icon={faGooglePlusG} />
+        <SocialLink url="https://plus.google.com/" icon={faGooglePlusG} />
         <SocialLink url="https://www.linkedin.com/company/theverisfoundation" icon={faLinkedinIn} />
         <SocialLink url="https://github.com/VerisFoundation" icon={faGithub} />
       </SocialLinks>

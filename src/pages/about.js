@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import Navigation from '../components/navigation'
-import OurTeam from '../components/ourTeam'
 import Footer from '../components/footer'
+import About from '../components/about'
+import Whitepaper from '../components/whitepaper'
 
-const Team = styled.div`
+const Main = styled.div`
   display: flex;
   flex-direction: column;
 `
 
 export default () => (
-  <Team>
+  <Main>
     <Navigation />
-    <OurTeam />
+    <About />
+    <Whitepaper />
     <Footer />
-  </Team>
+  </Main>
 )

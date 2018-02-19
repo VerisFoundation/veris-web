@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/fontawesome-pro-regular'
 import verisLogo from '../images/vrs_logo.svg'
+import verisLogoBlue from '../images/vrs_logo_blue.svg'
 
 const Navigation = styled.nav`
   display: flex;
@@ -13,6 +14,7 @@ const Navigation = styled.nav`
   width: 100%;
   padding: 1rem;
   font-size: 0.9rem;
+  margin: auto;
 
   ul {
     display: flex;
@@ -56,56 +58,56 @@ const Navigation = styled.nav`
 
   a:link,
   a:visited {
-    color: white;
+    color: ${props => (props.hero ? '#fff' : '#0F3552')};
     text-decoration: none;
   }
 `
 
-export default () => (
-  <Navigation>
+export default ({ hero }) => (
+  <Navigation hero={hero}>
     <Link to="/">
-      <img src={verisLogo} width="180" height="47" alt="Veris Logo" />
+      <img src={hero ? verisLogo : verisLogoBlue} width="180" height="47" alt="Veris Logo" />
     </Link>
     <ul>
       <li className="active">
         <span>
-          <Link>Technology</Link>
+          <Link to="/">Technology</Link>
           <FontAwesomeIcon icon={faChevronUp} />
         </span>
         <ul>
           <li>
-            <Link>How it works</Link>
+            <Link to="/">How it works</Link>
           </li>
           <li>
-            <Link>FAQ</Link>
+            <Link to="/faq">FAQ</Link>
           </li>
         </ul>
       </li>
       <li className="hidden">
         <span>
-          <Link>Company</Link>
+          <Link to="/">Company</Link>
           <FontAwesomeIcon icon={faChevronDown} />
         </span>
         <ul>
           <li>
-            <Link>About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link>Team</Link>
+            <Link to="/team">Team</Link>
           </li>
           <li>
-            <Link>Contact</Link>
+            <Link to="/">Contact</Link>
           </li>
         </ul>
       </li>
       <li>
         <span>
-          <Link>Whitepaper</Link>
+          <Link to="/">Whitepaper</Link>
         </span>
       </li>
       <li>
         <span>
-          <Link>Blog</Link>
+          <Link to="/">Blog</Link>
         </span>
       </li>
     </ul>

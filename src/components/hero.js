@@ -65,7 +65,7 @@ const HeroButton = Button.extend`
 
 export default () => (
   <Hero>
-    <Navigation />
+    <Navigation hero />
     <Section>
       <aside>
         <h1>
