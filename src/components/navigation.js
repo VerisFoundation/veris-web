@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faChevronDown, faChevronUp } from '@fortawesome/fontawesome-pro-regular'
+import { faChevronDown, faChevronUp, faBars } from '@fortawesome/fontawesome-pro-regular'
 import verisLogo from '../images/vrs_logo.svg'
 import verisLogoBlue from '../images/vrs_logo_blue.svg'
 
@@ -18,13 +18,7 @@ const Navigation = styled.nav`
   margin-bottom: ${props => (props.hero ? '-9rem' : '0')};
   color: ${props => (props.hero ? '#fff' : 'inherit')};
   z-index: 1;
-
-  ul {
-    display: flex;
-    margin-left: 0;
-    list-style: none;
-    align-items: center;
-  }
+  height: 9rem;
 
   li {
     margin-bottom: 0;
@@ -47,7 +41,22 @@ const Navigation = styled.nav`
     padding: 1rem;
   }
 
-  ul ul {
+  a:link,
+  a:visited {
+    color: ${props => (props.hero ? '#fff' : '#0F3552')};
+    text-decoration: none;
+  }
+`
+
+const HorizontalNav = styled.ul`
+  display: flex;
+  margin-left: 0;
+  list-style: none;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    margin-left: 0;
     margin-top: 0rem;
     display: block;
     background: linear-gradient(
@@ -63,14 +72,12 @@ const Navigation = styled.nav`
     left: 0;
   }
 
-  > ul:not(:last-child) > li {
+  &:not(:last-child) > li {
     margin-right: 0.5rem;
   }
 
-  a:link,
-  a:visited {
-    color: ${props => (props.hero ? '#fff' : '#0F3552')};
-    text-decoration: none;
+  @media (max-width: 700px) {
+    display: none;
   }
 `
 
@@ -114,7 +121,7 @@ class NavMenu extends React.Component {
       <li onClick={this.toggle} onMouseEnter={this.activate} onMouseLeave={this.deactivate}>
         <span>
           {this.props.label}
-          <FontAwesomeIcon icon={faChevronUp} rotation={active ? 0 : 180} />
+          <FontAwesomeIcon icon={faChevronUp} rotation={active ? null : 180} />
         </span>
         <NavList active={active}>{this.props.children}</NavList>
       </li>
@@ -122,32 +129,149 @@ class NavMenu extends React.Component {
   }
 }
 
-export default ({ hero }) => (
-  <Navigation hero={hero}>
-    <Link to="/">
-      <img src={hero ? verisLogo : verisLogoBlue} width="180" height="47" alt="Veris Logo" />
-    </Link>
-    <ul>
-      <NavMenu label="Technology">
-        <NavItem to="/works">How it works</NavItem>
-        <NavItem to="/faq">FAQ</NavItem>
-      </NavMenu>
-      <NavMenu label="Company">
-        <NavItem to="/about">About</NavItem>
-        <NavItem to="/team">Team</NavItem>
-        <NavItem to="/contact">Contact</NavItem>
-      </NavMenu>
-      <NavLink>
-        <Link to="/#whitepaper">Whitepaper</Link>
-      </NavLink>
-      <NavLink>
-        <a href="https://medium.com/verisfoundation">Blog</a>
-      </NavLink>
-    </ul>
-    <ul>
-      <NavLink>
-        <Link to="/presale">Presale</Link>
-      </NavLink>
-    </ul>
-  </Navigation>
-)
+const NavToggle = styled.button`
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  margin: 0 1rem 2rem;
+  cursor: pointer;
+
+  &:hover {
+    color: #278cd6;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: 700px) {
+    display: none;
+  }
+`
+
+const openDrawerMixin = css`
+  transform: translateX(-100%);
+`
+
+const NavDrawer = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #0f3552;
+  min-width: 200px;
+  box-shadow: 0 0 0.5rem hsla(0, 0%, 0%, 0.25);
+  transform: translateX(0);
+  transition: transform 200ms ease;
+  ${props => !props.open && openDrawerMixin};
+  font-weight: 300;
+
+  button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    padding: 0;
+    line-height: 1rem;
+    cursor: pointer;
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    padding: 0.5rem 1rem;
+    border-bottom: thin solid hsla(240, 1%, 84%, 0.25);
+  }
+
+  @media (min-width: 700px) {
+    display: none;
+  }
+`
+
+const DrawerHeader = styled.li`
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: #278cd6;
+`
+
+class Nav extends React.Component {
+  state = {
+    open: false
+  }
+
+  toggle = () => this.setState({ open: !this.state.open })
+
+  render() {
+    const { hero } = this.props
+    return (
+      <Navigation hero={hero}>
+        <Link to="/">
+          <img src={hero ? verisLogo : verisLogoBlue} width="180" height="47" alt="Veris Logo" />
+        </Link>
+        <HorizontalNav>
+          <NavMenu label="Technology">
+            <NavItem to="/works">How it works</NavItem>
+            <NavItem to="/faq">FAQ</NavItem>
+          </NavMenu>
+          <NavMenu label="Company">
+            <NavItem to="/about">About</NavItem>
+            <NavItem to="/team">Team</NavItem>
+            <NavItem to="/contact">Contact</NavItem>
+          </NavMenu>
+          <NavLink>
+            <Link to="/#whitepaper">Whitepaper</Link>
+          </NavLink>
+          <NavLink>
+            <a href="https://medium.com/verisfoundation">Blog</a>
+          </NavLink>
+        </HorizontalNav>
+        <HorizontalNav>
+          <NavLink>
+            <Link to="/presale">Presale</Link>
+          </NavLink>
+        </HorizontalNav>
+        <NavToggle onClick={this.toggle}>
+          <FontAwesomeIcon icon={faBars} />
+        </NavToggle>
+        <NavDrawer open={this.state.open}>
+          <button onClick={() => this.setState({ open: false })}>&times;</button>
+          <ul>
+            <DrawerHeader>Technology</DrawerHeader>
+            <NavItem to="/works">How it works</NavItem>
+            <NavItem to="/faq">FAQ</NavItem>
+            <DrawerHeader>Company</DrawerHeader>
+            <NavItem to="/about">About</NavItem>
+            <NavItem to="/team">Team</NavItem>
+            <NavItem to="/contact">Contact</NavItem>
+            <NavItem to="/contact">Contact</NavItem>
+            <NavItem to="/#whitepaper">Whitepaper</NavItem>
+            <NavItem to="https://medium.com/verisfoundation">Blog</NavItem>
+            <NavItem to="/presale">Presale</NavItem>
+          </ul>
+        </NavDrawer>
+      </Navigation>
+    )
+  }
+}
+
+export default Nav
