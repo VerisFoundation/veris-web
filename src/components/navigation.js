@@ -48,9 +48,15 @@ const Navigation = styled.nav`
   }
 
   ul ul {
-    margin-top: 0.2rem;
+    margin-top: 0rem;
     display: block;
-    background-color: hsla(205, 69%, 49%, 0.12);
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 0.2rem,
+      hsla(205, 69%, 49%, 0.12) 0.2rem,
+      hsla(205, 69%, 49%, 0.12) 100%
+    );
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -74,12 +80,14 @@ const NavLink = styled.li`
 
 const activeNavMixin = css`
   opacity: 1;
-  transform: 0;
+  transform: translateY(0);
+  pointer-events: inherit;
 `
 
 const NavList = styled.ul`
   opacity: 0;
-  transform: -100%;
+  transform: translateY(-100%);
+  pointer-events: none;
   transition: all 200ms ease;
   ${props => props.active && activeNavMixin};
 `
