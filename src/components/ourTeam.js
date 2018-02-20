@@ -38,9 +38,11 @@ const Modal = styled.div`
   margin: 1rem;
   display: flex;
   position: relative;
+  max-width: 960px;
 
   aside {
     flex: 1;
+    max-width: 16rem;
     margin-right: ${props => (props.active ? '2rem' : 0)};
   }
 
@@ -191,10 +193,10 @@ export default () => (
     <Container>
       <SectionHeader>Our Team</SectionHeader>
       <aside>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+        <h3>Who we are</h3>
         <p>
-          Facilis molestiae eaque repellat deserunt vero nemo amet adipisci ut voluptates labore officiis perferendis,
-          nam ea doloremque, optio repellendus? At, numquam quidem.
+          We’re a team of like-minded individuals dedicated to our mission of improving healthcare data processes. Our
+          work results in significantly lower costs and improves the way medical providers interact with payers.
         </p>
       </aside>
       <Team>

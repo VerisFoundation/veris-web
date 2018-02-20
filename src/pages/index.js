@@ -45,6 +45,5 @@ export default () => (
       <Button>Read our FAQ</Button>
     </Questions>
     <Whitepaper />
-    <Footer />
   </Home>
 )

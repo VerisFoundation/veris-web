@@ -14,7 +14,7 @@ const Hero = styled.div`
   color: white;
   clip-path: ellipse(150% 50% at 50% 47%);
   min-height: 60vh;
-  padding-bottom: 2rem;
+  padding: 9rem 0 2rem;
 `
 
 const Section = styled(Container)`
@@ -65,7 +65,6 @@ const HeroButton = Button.extend`
 
 export default () => (
   <Hero>
-    <Navigation hero />
     <Section>
       <aside>
         <h1>

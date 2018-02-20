@@ -45,7 +45,8 @@ const Answer = styled.div`
     margin-bottom: 2rem;
   }
 
-  p {
+  p,
+  ol {
     color: #144062;
     font-weight: 300;
     line-height: 1.8rem;
@@ -66,20 +67,18 @@ export default () => (
           <p>
             Blockchain provides four key fundamentals which sets this solution aside from existing attempts to address
             this with 'clearinghouse' type organizations:
-            <ol>
-              <li>Disintermediation - No central agent is required to approve transactions.</li>
-              <li>
-                Immutability - All transactions can not not be altered or deleted once added to the chain via consensus.
-              </li>
-              <li>
-                Reliability - All nodes contain a copy of the blockchain data, removing a central point of failure.
-              </li>
-              <li>
-                Transparency - The transactions in the blockchain are visible to all parties with appropriate access to
-                decrypt and review.
-              </li>
-            </ol>
           </p>
+          <ol>
+            <li>Disintermediation - No central agent is required to approve transactions.</li>
+            <li>
+              Immutability - All transactions can not not be altered or deleted once added to the chain via consensus.
+            </li>
+            <li>Reliability - All nodes contain a copy of the blockchain data, removing a central point of failure.</li>
+            <li>
+              Transparency - The transactions in the blockchain are visible to all parties with appropriate access to
+              decrypt and review.
+            </li>
+          </ol>
         </Answer>
         <Answer id="non-profit">
           <h2>Why is Veris a non-profit entity?</h2>

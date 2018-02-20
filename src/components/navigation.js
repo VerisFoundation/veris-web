@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/fontawesome-pro-regular'
 import verisLogo from '../images/vrs_logo.svg'
@@ -15,16 +15,25 @@ const Navigation = styled.nav`
   padding: 1rem;
   font-size: 0.9rem;
   margin: auto;
+  margin-bottom: ${props => (props.hero ? '-9rem' : '0')};
+  color: ${props => (props.hero ? '#fff' : 'inherit')};
+  z-index: 1;
 
   ul {
     display: flex;
     margin-left: 0;
     list-style: none;
+    align-items: center;
   }
 
   li {
     margin-bottom: 0;
     position: relative;
+
+    svg {
+      margin-left: 0.5rem;
+      transition: transform 200ms ease;
+    }
   }
 
   li li {
@@ -36,10 +45,6 @@ const Navigation = styled.nav`
     display: block;
     background-color: hsla(205, 69%, 49%, 0.12);
     padding: 1rem;
-  }
-
-  span a {
-    margin-right: 0.5rem;
   }
 
   ul ul {
@@ -63,58 +68,78 @@ const Navigation = styled.nav`
   }
 `
 
+const NavLink = styled.li`
+  padding-left: 1rem;
+`
+
+const activeNavMixin = css`
+  opacity: 1;
+  transform: 0;
+`
+
+const NavList = styled.ul`
+  opacity: 0;
+  transform: -100%;
+  transition: all 200ms ease;
+  ${props => props.active && activeNavMixin};
+`
+
+const NavItem = ({ to, children }) => (
+  <li>
+    <Link to={to}>{children}</Link>
+  </li>
+)
+
+class NavMenu extends React.Component {
+  state = {
+    active: false
+  }
+
+  activate = () => this.setState({ active: true })
+  deactivate = () => this.setState({ active: false })
+
+  toggle = () => this.setState({ active: !this.state.active })
+
+  render() {
+    const { active } = this.state
+    return (
+      <li onClick={this.toggle} onMouseEnter={this.activate} onMouseLeave={this.deactivate}>
+        <span>
+          {this.props.label}
+          <FontAwesomeIcon icon={faChevronUp} rotation={active ? 0 : 180} />
+        </span>
+        <NavList active={active}>{this.props.children}</NavList>
+      </li>
+    )
+  }
+}
+
 export default ({ hero }) => (
   <Navigation hero={hero}>
     <Link to="/">
       <img src={hero ? verisLogo : verisLogoBlue} width="180" height="47" alt="Veris Logo" />
     </Link>
     <ul>
-      <li className="active">
-        <span>
-          <Link to="/">Technology</Link>
-          <FontAwesomeIcon icon={faChevronUp} />
-        </span>
-        <ul>
-          <li>
-            <Link to="/works">How it works</Link>
-          </li>
-          <li>
-            <Link to="/faq">FAQ</Link>
-          </li>
-        </ul>
-      </li>
-      <li className="hidden">
-        <span>
-          <Link to="/">Company</Link>
-          <FontAwesomeIcon icon={faChevronDown} />
-        </span>
-        <ul>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/team">Team</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>
-          <Link to="/#whitepaper">Whitepaper</Link>
-        </span>
-      </li>
-      <li>
-        <span>
-          <a href="https://medium.com/verisfoundation">Blog</a>
-        </span>
-      </li>
+      <NavMenu label="Technology">
+        <NavItem to="/works">How it works</NavItem>
+        <NavItem to="/faq">FAQ</NavItem>
+      </NavMenu>
+      <NavMenu label="Company">
+        <NavItem to="/about">About</NavItem>
+        <NavItem to="/team">Team</NavItem>
+        <NavItem to="/contact">Contact</NavItem>
+      </NavMenu>
+      <NavLink>
+        <Link to="/#whitepaper">Whitepaper</Link>
+      </NavLink>
+      <NavLink>
+        <a href="https://medium.com/verisfoundation">Blog</a>
+      </NavLink>
     </ul>
     <ul>
-      <li>
+      <NavLink>
         <Link to="/presale">Presale</Link>
-      </li>
+      </NavLink>
     </ul>
   </Navigation>
 )

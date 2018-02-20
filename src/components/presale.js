@@ -160,42 +160,44 @@ export default () => (
             <h3>Overview</h3>
 
             <table>
-              <tr>
-                <th>Presale Timeline</th>
-                <td>Mar 19th, 2018 - Mar 26, 2018</td>
-              </tr>
-              <tr>
-                <th>ICO Timeline</th>
-                <td>Apr 2nd, 2018 - Apr 16, 2018</td>
-              </tr>
-              <tr>
-                <th>VRS Total Supply</th>
-                <td>50,000,000</td>
-              </tr>
-              <tr>
-                <th>Presale + ICO Allocation</th>
-                <td>30,000,000</td>
-              </tr>
-              <tr>
-                <th>Presale Price</th>
-                <td>100 VRS = 1 NEO (20% bonus)</td>
-              </tr>
-              <tr>
-                <th>ICO Price</th>
-                <td>100 VRS = 1 NEO (20% bonus) 80 VRS = 1 ETH</td>
-              </tr>
-              <tr>
-                <th>Minimum Cap</th>
-                <td>9,000 ETH / 28,000 NEO</td>
-              </tr>
-              <tr>
-                <th>Maximum Cap</th>
-                <td>90,000 ETH / 270,000 NEO</td>
-              </tr>
-              <tr>
-                <th>ICO Minimum Cap</th>
-                <td>100 VRS = 1 NEO (20% bonus)</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Presale Timeline</th>
+                  <td>Mar 19th, 2018 - Mar 26, 2018</td>
+                </tr>
+                <tr>
+                  <th>ICO Timeline</th>
+                  <td>Apr 2nd, 2018 - Apr 16, 2018</td>
+                </tr>
+                <tr>
+                  <th>VRS Total Supply</th>
+                  <td>50,000,000</td>
+                </tr>
+                <tr>
+                  <th>Presale + ICO Allocation</th>
+                  <td>30,000,000</td>
+                </tr>
+                <tr>
+                  <th>Presale Price</th>
+                  <td>100 VRS = 1 NEO (20% bonus)</td>
+                </tr>
+                <tr>
+                  <th>ICO Price</th>
+                  <td>100 VRS = 1 NEO (20% bonus) 80 VRS = 1 ETH</td>
+                </tr>
+                <tr>
+                  <th>Minimum Cap</th>
+                  <td>9,000 ETH / 28,000 NEO</td>
+                </tr>
+                <tr>
+                  <th>Maximum Cap</th>
+                  <td>90,000 ETH / 270,000 NEO</td>
+                </tr>
+                <tr>
+                  <th>ICO Minimum Cap</th>
+                  <td>100 VRS = 1 NEO (20% bonus)</td>
+                </tr>
+              </tbody>
             </table>
           </aside>
 
