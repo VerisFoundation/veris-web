@@ -131,7 +131,7 @@ class NavMenu extends React.Component {
 
 const NavToggle = styled.button`
   background-color: transparent;
-  color: #fff;
+  color: ${props => (props.hero ? '#fff' : '#0F3552')};
   border: none;
   font-size: 2rem;
   margin: 0 1rem 2rem;
@@ -171,6 +171,7 @@ const NavDrawer = styled.nav`
   transition: transform 200ms ease;
   ${props => !props.open && openDrawerMixin};
   font-weight: 300;
+  z-index: 2000;
 
   button {
     color: white;
@@ -191,6 +192,11 @@ const NavDrawer = styled.nav`
     &:focus {
       outline: none;
     }
+  }
+
+  a:link,
+  a:visited {
+    color: #fff;
   }
 
   ul {
@@ -250,7 +256,7 @@ class Nav extends React.Component {
             <Link to="/presale">Presale</Link>
           </NavLink>
         </HorizontalNav>
-        <NavToggle onClick={this.toggle}>
+        <NavToggle hero={hero} onClick={this.toggle}>
           <FontAwesomeIcon icon={faBars} />
         </NavToggle>
         <NavDrawer open={this.state.open}>
@@ -263,7 +269,7 @@ class Nav extends React.Component {
             <NavItem to="/about">About</NavItem>
             <NavItem to="/team">Team</NavItem>
             <NavItem to="/contact">Contact</NavItem>
-            <NavItem to="/contact">Contact</NavItem>
+            <DrawerHeader>&nbsp;</DrawerHeader>
             <NavItem to="/#whitepaper">Whitepaper</NavItem>
             <NavItem to="https://medium.com/verisfoundation">Blog</NavItem>
             <NavItem to="/presale">Presale</NavItem>

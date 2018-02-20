@@ -28,6 +28,10 @@ const Footer = styled.div`
   > div {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 540px) {
+      flex-direction: column-reverse;
+    }
   }
 
   ul {

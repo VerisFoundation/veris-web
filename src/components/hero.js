@@ -20,10 +20,13 @@ const Hero = styled.div`
 const Section = styled(Container)`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex: 1;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
 
   aside {
     max-width: 600px;
@@ -39,6 +42,7 @@ const Countdown = styled.div`
   min-width: 320px;
   border: 0.1rem solid hsla(0, 100%, 100%, 0.42);
   background-color: hsla(0, 100%, 100%, 0.1);
+  margin: 2rem 0;
 
   h2 {
     border-bottom: 0.1rem solid hsla(0, 100%, 100%, 0.42);

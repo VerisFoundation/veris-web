@@ -16,6 +16,10 @@ const Questions = styled.div`
   border-radius: 0.25rem;
   position: sticky;
   top: 1rem;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `
 
 const Question = styled.div`

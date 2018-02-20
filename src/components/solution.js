@@ -11,6 +11,9 @@ const Solution = styled.div`
   background: url(${graph}) no-repeat, linear-gradient(-45deg, #008bca 0%, #278cd6 100%);
   background-position: center 120%;
   background-size: 200vh, auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h2 {
     font-family: 'Open Sans';
@@ -32,7 +35,7 @@ const Solution = styled.div`
 `
 
 const Section = styled.div`
-  margin: auto;
+  margin: 1rem;
   max-width: 640px;
   text-align: center;
 `

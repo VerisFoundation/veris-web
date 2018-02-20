@@ -46,6 +46,11 @@ const Overview = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 
   li {
@@ -98,6 +103,10 @@ const Blogs = styled.div`
     list-style: none;
     margin: 0;
     display: flex;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
   }
 
   li {
@@ -106,7 +115,13 @@ const Blogs = styled.div`
   }
 
   li + li {
-    border-left: thin solid #d8d8d9;
+    @media (min-width: 640px) {
+      border-left: thin solid #d8d8d9;
+    }
+
+    @media (max-width: 640px) {
+      border-top: thin solid #d8d8d9;
+    }
   }
 
   a:link,

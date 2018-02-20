@@ -25,6 +25,11 @@ const Header = styled.header`
 
   iframe {
     flex: 1;
+    width: 100%;
+  }
+
+  @media (max-width: 760px) {
+    flex-direction: column;
   }
 `
 
