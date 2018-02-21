@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Container from './Container'
 import SectionHeader from './sectionHeader'
 import timeline from '../images/timeline.svg'
+import allocationImg from '../images/ill_allocation.svg'
 
 const Presale = styled.div``
 
@@ -73,6 +74,11 @@ const Header = styled.header`
       font-weight: 700;
     }
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const CrowdsaleInfo = styled.div`
@@ -117,6 +123,22 @@ const CrowdsaleInfo = styled.div`
 
   table {
     font-size: 0.8rem;
+  }
+
+  img {
+    margin: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  @media (max-width: 640px) {
+    section {
+      flex-direction: column;
+    }
+
+    aside {
+      flex-basis: 100%;
+      margin-bottom: 2rem;
+    }
   }
 `
 
@@ -204,13 +226,7 @@ export default () => (
           <aside>
             <h3>Allocation</h3>
 
-            <ul>
-              <li>Public Contributors: 30,000,000 VRS / 60% of total Veris</li>
-              <li>Foundation: 13,000,000 VRS / 26% of total</li>
-              <li>Veris Core Team : 4,000,000 VRS / 8% of total</li>
-              <li>Partnerships and Advisory: 2,000,000 VRS / 4% of total</li>
-              <li>Bounties: 1,000,000 VRS / 2% of total</li>
-            </ul>
+            <img src={allocationImg} width="400" />
           </aside>
         </section>
       </Container>

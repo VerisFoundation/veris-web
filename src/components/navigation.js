@@ -17,7 +17,7 @@ const Navigation = styled.nav`
   margin: auto;
   margin-bottom: ${props => (props.hero ? '-9rem' : '0')};
   color: ${props => (props.hero ? '#fff' : 'inherit')};
-  z-index: 1;
+  z-index: 100;
   height: 9rem;
 
   li {
@@ -171,7 +171,7 @@ const NavDrawer = styled.nav`
   transition: transform 200ms ease;
   ${props => !props.open && openDrawerMixin};
   font-weight: 300;
-  z-index: 2000;
+  z-index: 1;
 
   button {
     color: white;

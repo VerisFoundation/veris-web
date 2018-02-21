@@ -141,8 +141,8 @@ export default () => (
       <SectionHeader>About Us</SectionHeader>
       <h3>Our Mission</h3>
       <p>
-        Veris aims to Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-        elit. Nulla vitae elit libero, a pharetra augue.
+        Veris is committed to reducing the administrative expense and fraud in the American healthcare system. We
+        believe these outcomes will result in higher value healthcare for all Americans.
       </p>
     </Container>
     <OverviewWrapper>
