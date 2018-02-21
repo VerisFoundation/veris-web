@@ -99,9 +99,11 @@ const NavList = styled.ul`
   ${props => props.active && activeNavMixin};
 `
 
-const NavItem = ({ to, children }) => (
+const NavItem = ({ to, children, onClick }) => (
   <li>
-    <Link to={to}>{children}</Link>
+    <Link onClick={onClick} to={to}>
+      {children}
+    </Link>
   </li>
 )
 
@@ -227,6 +229,11 @@ class Nav extends React.Component {
 
   toggle = () => this.setState({ open: !this.state.open })
 
+  closeMenu = () => {
+    console.log('What')
+    this.setState({ open: false })
+  }
+
   render() {
     const { hero } = this.props
     return (
@@ -260,19 +267,35 @@ class Nav extends React.Component {
           <FontAwesomeIcon icon={faBars} />
         </NavToggle>
         <NavDrawer open={this.state.open}>
-          <button onClick={() => this.setState({ open: false })}>&times;</button>
+          <button onClick={this.closeMenu}>&times;</button>
           <ul>
             <DrawerHeader>Technology</DrawerHeader>
-            <NavItem to="/works">How it works</NavItem>
-            <NavItem to="/faq">FAQ</NavItem>
+            <NavItem onClick={this.closeMenu} to="/works">
+              How it works
+            </NavItem>
+            <NavItem onClick={this.closeMenu} to="/faq">
+              FAQ
+            </NavItem>
             <DrawerHeader>Company</DrawerHeader>
-            <NavItem to="/about">About</NavItem>
-            <NavItem to="/team">Team</NavItem>
-            <NavItem to="/contact">Contact</NavItem>
+            <NavItem onClick={this.closeMenu} to="/about">
+              About
+            </NavItem>
+            <NavItem onClick={this.closeMenu} to="/team">
+              Team
+            </NavItem>
+            <NavItem onClick={this.closeMenu} to="/contact">
+              Contact
+            </NavItem>
             <DrawerHeader>&nbsp;</DrawerHeader>
-            <NavItem to="/#whitepaper">Whitepaper</NavItem>
-            <NavItem to="https://medium.com/verisfoundation">Blog</NavItem>
-            <NavItem to="/presale">Presale</NavItem>
+            <NavItem onClick={this.closeMenu} to="/#whitepaper">
+              Whitepaper
+            </NavItem>
+            <NavItem onClick={this.closeMenu} to="https://medium.com/verisfoundation">
+              Blog
+            </NavItem>
+            <NavItem onClick={this.closeMenu} to="/presale">
+              Presale
+            </NavItem>
           </ul>
         </NavDrawer>
       </Navigation>

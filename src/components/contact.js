@@ -17,6 +17,10 @@ const Main = styled.main`
   p {
     font-weight: 300;
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 `
 
 const ContactForm = styled.div`
