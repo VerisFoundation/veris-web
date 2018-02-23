@@ -7,7 +7,7 @@ import Platform from '../components/platform'
 import Crowdsale from '../components/crowdsale'
 import Whitepaper from '../components/whitepaper'
 import Footer from '../components/footer'
-import Button from '../components/button'
+import ButtonLink from '../components/buttonLink'
 import Container from '../components/container'
 
 const Home = styled.div`
@@ -42,7 +42,7 @@ export default () => (
     <Crowdsale />
     <Questions>
       <h3>Have any questions?</h3>
-      <Button>Read our FAQ</Button>
+      <ButtonLink to="/faq">Read our FAQ</ButtonLink>
     </Questions>
     <Whitepaper />
   </Home>

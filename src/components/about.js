@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faChevronRight, faCheck } from '@fortawesome/fontawesome-pro-regular'
 import Container from './Container'
-import Button from './Button'
+import ButtonLink from './ButtonLink'
 import SectionHeader from './sectionHeader'
 
 const About = styled.div`
@@ -131,9 +131,23 @@ const Blogs = styled.div`
   }
 `
 
-const MoreButton = styled(Button)`
+const MoreButton = styled.a`
+  display: inline-block;
   padding: 1rem 2rem;
   margin: 6rem auto;
+  background-color: #278cd6;
+  color: #fff;
+  border: none;
+  border-radius: 48px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
 `
 
 export default () => (
@@ -233,7 +247,7 @@ export default () => (
             </p>
           </li>
         </ul>
-        <MoreButton>Read More</MoreButton>
+        <MoreButton href="https://medium.com/verisfoundation">Read More</MoreButton>
       </Container>
     </Blogs>
   </About>

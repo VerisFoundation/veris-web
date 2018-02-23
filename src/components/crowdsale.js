@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from './button'
+import ButtonLink from './buttonLink'
 import Container from './Container'
 import presaleScreenshot from '../images/img_presale@2x.png'
 
@@ -41,7 +41,7 @@ export default () => (
       <aside>
         <h2>The VRS crowdsale is opening soon</h2>
         <p>We will be opening our presale at 12:00p EST on March 19, 2018.</p>
-        <Button>Learn More</Button>
+        <ButtonLink to="/presale">Learn More</ButtonLink>
       </aside>
     </Crowdsale>
   </Container>

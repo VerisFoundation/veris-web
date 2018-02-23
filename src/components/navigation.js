@@ -290,7 +290,12 @@ class Nav extends React.Component {
             <NavItem onClick={this.closeMenu} to="/#whitepaper">
               Whitepaper
             </NavItem>
-            <NavItem onClick={this.closeMenu} to="https://medium.com/verisfoundation">
+            <NavItem
+              onClick={() => {
+                window.location = 'https://medium.com/verisfoundation'
+                this.closeMenu
+              }}
+            >
               Blog
             </NavItem>
             <NavItem onClick={this.closeMenu} to="/presale">

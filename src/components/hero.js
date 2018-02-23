@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Container from '../components/container'
-import Button from '../components/button'
+import ButtonLink from '../components/buttonLink'
 import Navigation from '../components/navigation'
 import heroBG from '../images/img_herobg@2x.png'
 
@@ -57,7 +57,7 @@ const Countdown = styled.div`
   }
 `
 
-const HeroButton = Button.extend`
+const HeroButton = ButtonLink.extend`
   background-color: transparent;
   border: 0.1rem solid #278cd6;
 
@@ -80,7 +80,7 @@ export default () => (
           The Veris Foundation is focused on directly connecting payers with providers, reducing yearly healthcare
           expenses by up to $59B, ultimately lowering healthcare costs for patients.
         </p>
-        <HeroButton>
+        <HeroButton to="/works">
           Watch the Video
           <span>&#9654;</span>
         </HeroButton>
@@ -88,7 +88,7 @@ export default () => (
       <Countdown>
         <h2>VRS Presale</h2>
         <time>20:40:40:30</time>
-        <Button>Learn More</Button>
+        <ButtonLink to="/presale">Learn More</ButtonLink>
       </Countdown>
     </Section>
   </Hero>
