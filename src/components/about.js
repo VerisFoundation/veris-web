@@ -112,6 +112,7 @@ const Blogs = styled.div`
   li {
     padding: 2rem;
     text-align: left;
+    flex: 1;
   }
 
   li + li {
@@ -153,40 +154,32 @@ export default () => (
             <span>
               <FontAwesomeIcon icon={faCheck} />
             </span>
-            Governed by a non-profit entity to ensure direction of company moves in the right direction.
+            Governed by the Veris Foundation, non-profit entity, to ensure strong governance
           </li>
           <li>
             <span>
               <FontAwesomeIcon icon={faCheck} />
             </span>
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.
+            An s-corp incorporated in Delaware,US and fully held by the Veris Foundation
           </li>
           <li>
             <span>
               <FontAwesomeIcon icon={faCheck} />
             </span>
-            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Cras mattis consectetur
-            purus sit amet.
+            Financials all roll up to the Veris Foundation which is bound by strict financial reporting requirements
+            providing a high level of financial transparency
           </li>
           <li>
             <span>
               <FontAwesomeIcon icon={faCheck} />
             </span>
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.
+            All officers of the organization are citizens of the United States
           </li>
           <li>
             <span>
               <FontAwesomeIcon icon={faCheck} />
             </span>
-            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio dui. Cras mattis consectetur
-            purus sit amet.
-          </li>
-          <li>
-            <span>
-              {' '}
-              <FontAwesomeIcon icon={faCheck} />
-            </span>
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+            Offices based in Jersey City, NJ
           </li>
         </ul>
         <Meet>
@@ -204,27 +197,27 @@ export default () => (
         <h3>Latest Blog Articles</h3>
         <ul>
           <li>
-            <img src="https://cdn-images-1.medium.com/max/1600/1*S7EJHf1InOWv64hWuNBICA.jpeg" />
+            <img src="https://cdn-images-1.medium.com/max/1600/1*2HBQKkJz9geVrAgiwfgLzw.jpeg" />
             <h4>
-              <a href="https://medium.com/verisfoundation/one-example-of-rising-costs-in-the-us-healthcare-system-an-executive-view-62feef15c98f">
-                One Example of Why US Healthcare Costs are Rising — An Executive’s View
+              <a href="https://medium.com/verisfoundation/a-primer-on-neo-network-fee-generation-and-its-importance-in-the-veris-blockchain-de293b5fa4a6">
+                A Primer on NEO Network Fee Generation and its Importance in the Veris Blockchain
               </a>
             </h4>
             <p>
-              As healthcare costs continue to increase there is an ever growing battle going on between healthcare
-              providers and insurers.
+              When discussing NEO I find a surprising number of people are not certain what the purpose of GAS is, how
+              GAS is created, and why GAS has value.
             </p>
           </li>
           <li>
-            <img src="https://cdn-images-1.medium.com/max/1600/1*S7EJHf1InOWv64hWuNBICA.jpeg" />
+            <img src="https://cdn-images-1.medium.com/max/1600/1*p5SNikZmFBpcIhUV9OelOg.png" />
             <h4>
-              <a href="https://medium.com/verisfoundation/one-example-of-rising-costs-in-the-us-healthcare-system-an-executive-view-62feef15c98f">
-                One Example of Why US Healthcare Costs are Rising — An Executive’s View
+              <a href="https://medium.com/verisfoundation/the-administrative-burden-in-healthcare-f1c577f9edd1">
+                The Administrative Burden in Healthcare
               </a>
             </h4>
             <p>
-              As healthcare costs continue to increase there is an ever growing battle going on between healthcare
-              providers and insurers.
+              This past week Amazon, Berkshire Hathaway and JP Morgan Chase announced that they forming a joint venture
+              to address healthcare costs.
             </p>
           </li>
           <li>

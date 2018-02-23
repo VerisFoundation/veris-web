@@ -195,16 +195,15 @@ export default () => (
       <aside>
         <h3>Who we are</h3>
         <p>
-          We’re a team of like-minded individuals dedicated to our mission of improving healthcare data processes. Our
-          work results in significantly lower costs and improves the way medical providers interact with payers.
+          We&rsquo;re a team of like-minded individuals dedicated to our mission of improving healthcare data processes.
+          Our work results in significantly lower costs and improves the way medical providers interact with payers.
         </p>
       </aside>
       <Team>
         <Member name="Chris Plance" title="Founder &amp; CEO" image={imgChris}>
           <SocialLinks>
-            <SocalLink platform="Twitter" url="http://twitter.com/" />
-            <SocalLink platform="Linked In" url="http://linkedin.com/" />
-            <SocalLink platform="Medium" url="http://medium.com/" />
+            <SocalLink platform="Linked In" url="http://www.linkedin.com/in/chrisplance" />
+            <SocalLink platform="Medium" url="https://medium.com/@chris.plance" />
           </SocialLinks>
           <p>
             Chris is an engineer, entrepreneur, and management consultant with over 20 years experience providing
@@ -218,9 +217,8 @@ export default () => (
         </Member>
         <Member name="Eric Lawlor" title="Advisor" image={imgEric}>
           <SocialLinks>
-            <SocalLink platform="Twitter" url="http://twitter.com/" />
-            <SocalLink platform="Linked In" url="http://linkedin.com/" />
-            <SocalLink platform="Medium" url="http://medium.com/" />
+            <SocalLink platform="Linked In" url="http://www.linkedin.com/in/eric-lawlor-mba-cma-6505a214" />
+            <SocalLink platform="Medium" url="https://medium.com/@ericlawlor" />
           </SocialLinks>
           <p>
             Eric has over 24 years of experience in numerous business lines in the healthcare industry. This experience
@@ -235,9 +233,7 @@ export default () => (
         </Member>
         <Member name="Dan Riston" title="Advisor" image={imgDan}>
           <SocialLinks>
-            <SocalLink platform="Twitter" url="http://twitter.com/" />
-            <SocalLink platform="Linked In" url="http://linkedin.com/" />
-            <SocalLink platform="Medium" url="http://medium.com/" />
+            <SocalLink platform="Linked In" url="https://www.linkedin.com/in/dan-riston-8ba0b217/" />
           </SocialLinks>
           <p>
             Dan has 30 years experience on the payer side of healthcare. During this time he has been primarily involved
@@ -254,17 +250,32 @@ export default () => (
         </Member>
         <Member name="Jason L Perry" title="Technical Lead" image={imgJason}>
           <SocialLinks>
-            <SocalLink platform="Twitter" url="http://twitter.com/ambethia" />
-            <SocalLink platform="GitHub" url="http://github.com/ambethia" />
-            <SocalLink platform="Medium" url="http://medium.com/ambethia" />
+            <SocalLink platform="Twitter" url="https://twitter.com/ambethia" />
+            <SocalLink platform="GitHub" url="https://github.com/ambethia" />
+            <SocalLink platform="Medium" url="https://medium.com/@ambethia" />
           </SocialLinks>
+          <p>
+            Jason is a native Floridian who started building for the web as a teen in the mid-&rsquo;90s, so he&rsquo;s
+            been a web developer for about as long as anybody. Co-founding the Tampa Ruby Brigade in 2006, Suncoast
+            Developers Guild in 2015, Jason takes pride in being a leader in the local tech community. After stints in
+            academia, startups, and as a consulting freelancer, he&rsquo;s found great joy in mentoring and sharing the
+            knowledge gained along the way. He&rsquo;s also a game development enthusiast, passionate about
+            cryptocurrency, and loves animation. Jason is a father, a skeptic, entirely too opinionated, and prefers a
+            word count in powers of two. When the world gets heavy you can find him either unbuilding LEGO&reg; sets as
+            catharsis or harnessing his power animal &mdash; the panda.
+          </p>
         </Member>
         <Member name="Matthew LeGrice" title="Design Lead" image={imgMatt}>
           <SocialLinks>
-            <SocalLink platform="Twitter" url="http://twitter.com/" />
-            <SocalLink platform="Linked In" url="http://linkedin.com/" />
-            <SocalLink platform="Medium" url="http://medium.com/" />
+            <SocalLink platform="Website" url="http://mattehue.com/" />
+            <SocalLink platform="Dribbble" url="http://dribbble.com/Mattehue" />
           </SocialLinks>
+          <p>
+            Matthew LeGrice is an independent designer and illustrator based in Jersey City, New Jersey. He has nearly
+            10 years of design experience working with brands small and big, helping to elevate the way they communicate
+            visually with their audiences.
+          </p>
+          <p>Some recent clients include SeatGeek, New York Rangers, and Biolite Energy.</p>
         </Member>
       </Team>
     </Container>
