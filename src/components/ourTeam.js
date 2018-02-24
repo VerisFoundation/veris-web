@@ -29,6 +29,12 @@ const Team = styled.ul`
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 540px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const Modal = styled.div`
@@ -39,6 +45,8 @@ const Modal = styled.div`
   display: flex;
   position: relative;
   max-width: 960px;
+  max-height: 80vh;
+  overflow-y: scroll;
 
   aside {
     flex: 1;
@@ -48,6 +56,14 @@ const Modal = styled.div`
 
   section {
     flex: 2;
+  }
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+
+    h5 {
+      margin-bottom: 1rem;
+    }
   }
 `
 
@@ -65,6 +81,14 @@ const modalMixin = css`
   padding: 3rem;
 `
 
+const mouseHoverMixin = css`
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.66;
+  }
+`
+
 const MemberItem = styled.li`
   margin: 0;
   font-weight: 300;
@@ -74,6 +98,7 @@ const MemberItem = styled.li`
   img {
     margin: 0;
     width: 100%;
+    ${props => !props.active && mouseHoverMixin};
   }
 
   h4 {
@@ -83,6 +108,7 @@ const MemberItem = styled.li`
     font-size: 1.2rem;
     line-height: 1rem;
     margin: 1rem 0 0.6rem;
+    ${props => !props.active && mouseHoverMixin};
 
     &:after {
       background: #008bca;
