@@ -5,8 +5,6 @@ import SectionHeader from './sectionHeader'
 import timeline from '../images/timeline.svg'
 import allocationImg from '../images/ill_allocation.svg'
 
-const Presale = styled.div``
-
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
@@ -155,87 +153,118 @@ const Timeline = styled.div`
   }
 `
 
-export default () => (
-  <Presale>
-    <Container>
-      <SectionHeader>Presale</SectionHeader>
-      <Header>
-        <section>
-          <h3>The VRS Presale opens on Monday, March 19.</h3>
-          <p>We will be releasing our coin at 12:00p EST. Sign up below to be reminded.</p>
-          <form action="">
-            <input type="email" placeholder="Enter Your Email" />
-            <button type="submit">Submit</button>
-          </form>
-        </section>
-        <aside>
-          <h4>Time until Presale</h4>
-          <time>23:13:45:45</time>
-        </aside>
-      </Header>
-    </Container>
-    <CrowdsaleInfo>
-      <Container>
-        <h2>Veris Foundation Crowdsale Info</h2>
-        <section>
-          <aside>
-            <h3>Overview</h3>
+class Presale extends React.Component {
+  state = {
+    thanks: false,
+    email: ''
+  }
 
-            <table>
-              <tbody>
-                <tr>
-                  <th>Presale Timeline</th>
-                  <td>Mar 19th, 2018 - Mar 26, 2018</td>
-                </tr>
-                <tr>
-                  <th>ICO Timeline</th>
-                  <td>Apr 2nd, 2018 - Apr 16, 2018</td>
-                </tr>
-                <tr>
-                  <th>VRS Total Supply</th>
-                  <td>50,000,000</td>
-                </tr>
-                <tr>
-                  <th>Presale + ICO Allocation</th>
-                  <td>30,000,000</td>
-                </tr>
-                <tr>
-                  <th>Presale Price</th>
-                  <td>100 VRS = 1 NEO (20% bonus)</td>
-                </tr>
-                <tr>
-                  <th>ICO Price</th>
-                  <td>100 VRS = 1 NEO (20% bonus) 80 VRS = 1 ETH</td>
-                </tr>
-                <tr>
-                  <th>Minimum Cap</th>
-                  <td>9,000 ETH / 28,000 NEO</td>
-                </tr>
-                <tr>
-                  <th>Maximum Cap</th>
-                  <td>90,000 ETH / 270,000 NEO</td>
-                </tr>
-                <tr>
-                  <th>ICO Minimum Cap</th>
-                  <td>100 VRS = 1 NEO (20% bonus)</td>
-                </tr>
-              </tbody>
-            </table>
-          </aside>
+  _submit = event => {
+    event.preventDefault()
+    const email = encodeURIComponent(this.state.email)
+    const url = `https://script.google.com/a/suncoast.io/macros/s/AKfycbx5j3f48_i0layRQ8mKhBwVo-wJSuu-XHNMXc77kKPC9pGhob5P/exec?email=${email}`
+    window.fetch(url, { method: 'GET' })
+    this.setState({ thanks: true, email: '' })
+  }
 
-          <aside>
-            <h3>Allocation</h3>
+  _change = event => {
+    this.setState({ email: event.target.value })
+  }
 
-            <img src={allocationImg} width="400" />
-          </aside>
-        </section>
-      </Container>
-    </CrowdsaleInfo>
-    <Timeline>
-      <Container>
-        <h2>Veris Project Timeline</h2>
-        <img src={timeline} />
-      </Container>
-    </Timeline>
-  </Presale>
-)
+  render() {
+    return (
+      <div>
+        <Container>
+          <SectionHeader>Presale</SectionHeader>
+          <Header>
+            {this.state.thanks ? (
+              <div>
+                <h3>
+                  <strong>Thanks</strong>, we'll be in touch.
+                </h3>
+              </div>
+            ) : (
+              <section>
+                <h3>The VRS Presale opens on Monday, March 19.</h3>
+                <p>We will be releasing our coin at 12:00p EST. Sign up below to be reminded.</p>
+                <form action="" onSubmit={this._submit}>
+                  <input required type="email" placeholder="Enter Your Email" onChange={this._change} />
+                  <button type="submit">Submit</button>
+                </form>
+              </section>
+            )}
+            <aside>
+              <h4>Time until Presale</h4>
+              <time>23:13:45:45</time>
+            </aside>
+          </Header>
+        </Container>
+        <CrowdsaleInfo>
+          <Container>
+            <h2>Veris Foundation Crowdsale Info</h2>
+            <section>
+              <aside>
+                <h3>Overview</h3>
+
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Presale Timeline</th>
+                      <td>Mar 19th, 2018 - Mar 26, 2018</td>
+                    </tr>
+                    <tr>
+                      <th>ICO Timeline</th>
+                      <td>Apr 2nd, 2018 - Apr 16, 2018</td>
+                    </tr>
+                    <tr>
+                      <th>VRS Total Supply</th>
+                      <td>50,000,000</td>
+                    </tr>
+                    <tr>
+                      <th>Presale + ICO Allocation</th>
+                      <td>30,000,000</td>
+                    </tr>
+                    <tr>
+                      <th>Presale Price</th>
+                      <td>100 VRS = 1 NEO (20% bonus)</td>
+                    </tr>
+                    <tr>
+                      <th>ICO Price</th>
+                      <td>100 VRS = 1 NEO (20% bonus) 80 VRS = 1 ETH</td>
+                    </tr>
+                    <tr>
+                      <th>Minimum Cap</th>
+                      <td>9,000 ETH / 28,000 NEO</td>
+                    </tr>
+                    <tr>
+                      <th>Maximum Cap</th>
+                      <td>90,000 ETH / 270,000 NEO</td>
+                    </tr>
+                    <tr>
+                      <th>ICO Minimum Cap</th>
+                      <td>100 VRS = 1 NEO (20% bonus)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </aside>
+
+              <aside>
+                <h3>Allocation</h3>
+
+                <img src={allocationImg} width="400" />
+              </aside>
+            </section>
+          </Container>
+        </CrowdsaleInfo>
+        <Timeline>
+          <Container>
+            <h2>Veris Project Timeline</h2>
+            <img src={timeline} />
+          </Container>
+        </Timeline>
+      </div>
+    )
+  }
+}
+
+export default Presale
