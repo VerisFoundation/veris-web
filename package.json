@@ -5,7 +5,7 @@
     "build": "gatsby build",
     "predeploy": "yarn build",
     "serve": "gatsby serve",
-    "start": "gatsby develop"
+    "start": "gatsby develop -H 0.0.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3",

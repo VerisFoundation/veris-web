@@ -24,12 +24,16 @@ const Section = styled(Container)`
   align-items: center;
   flex: 1;
 
+  aside {
+    max-width: 600px;
+  }
+
   @media (max-width: 960px) {
     flex-direction: column;
   }
 
-  aside {
-    max-width: 600px;
+  @media (max-width: 640px) {
+    text-align: center;
   }
 `
 
@@ -54,6 +58,10 @@ const Countdown = styled.div`
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
+  }
+
+  @media (max-width: 400px) {
+    min-width: auto;
   }
 `
 

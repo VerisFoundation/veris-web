@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from './Container'
+import Container from './container'
 import SectionHeader from './sectionHeader'
 import timeline from '../images/timeline.svg'
 import allocationImg from '../images/ill_allocation.svg'

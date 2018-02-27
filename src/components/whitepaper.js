@@ -25,6 +25,15 @@ const Whitepaper = styled.div`
     font-weight: 100;
     font-size: 0.9rem;
   }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+
+    aside {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
 `
 
 const WhitepaperContainer = styled(Container)`

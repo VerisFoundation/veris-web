@@ -67,6 +67,24 @@ const Platform = styled.div`
   li img {
     margin-bottom: 0;
   }
+
+  @media (max-width: 420px) {
+    padding: 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+      line-height: 1.4rem;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  }
 `
 
 const LearnMore = styled.p`

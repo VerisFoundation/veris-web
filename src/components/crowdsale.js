@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import ButtonLink from './buttonLink'
-import Container from './Container'
+import Container from './container'
 import presaleScreenshot from '../images/img_presale@2x.png'
 
 const Crowdsale = styled.div`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 
   h2 {
@@ -29,6 +28,25 @@ const Crowdsale = styled.div`
     min-width: 320px;
     flex: 1;
     font-weight: 100;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+
+    figure {
+      min-width: inherit;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.4rem;
+    }
+
+    aside {
+      min-width: inherit;
+      margin-bottom: 2rem;
+    }
   }
 `
 

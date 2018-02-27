@@ -31,6 +31,11 @@ const Questions = styled.div`
     font-size: 1.8rem;
     margin: 1rem;
   }
+
+  @media (max-width: 640px) {
+    text-align: center;
+    flex-direction: column;
+  }
 `
 
 export default () => (

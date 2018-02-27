@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Container from './Container'
+import Container from './container'
 import Crowdsale from './crowdsale'
 import SectionHeader from './sectionHeader'
 import processImg from '../images/process.svg'

@@ -3,8 +3,8 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faChevronRight, faCheck } from '@fortawesome/fontawesome-pro-regular'
-import Container from './Container'
-import ButtonLink from './ButtonLink'
+import Container from './container'
+import ButtonLink from './buttonLink'
 import SectionHeader from './sectionHeader'
 
 const About = styled.div`
