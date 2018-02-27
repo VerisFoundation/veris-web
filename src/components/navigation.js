@@ -295,6 +295,7 @@ class Nav extends React.Component {
                 window.location = 'https://medium.com/verisfoundation'
                 this.closeMenu
               }}
+              to="#"
             >
               Blog
             </NavItem>

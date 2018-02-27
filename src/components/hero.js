@@ -4,6 +4,7 @@ import Container from '../components/container'
 import ButtonLink from '../components/buttonLink'
 import Navigation from '../components/navigation'
 import heroBG from '../images/img_herobg@2x.png'
+import Timer from './timer'
 
 const Hero = styled.div`
   display: flex;
@@ -95,7 +96,7 @@ export default () => (
       </aside>
       <Countdown>
         <h2>VRS Presale</h2>
-        <time>20:40:40:30</time>
+        <Timer to="Sun, 18 Mar 2018 00:00:00 -0500" />
         <ButtonLink to="/presale">Learn More</ButtonLink>
       </Countdown>
     </Section>

@@ -4,6 +4,7 @@ import Container from './container'
 import SectionHeader from './sectionHeader'
 import timeline from '../images/timeline.svg'
 import allocationImg from '../images/ill_allocation.svg'
+import Timer from './timer'
 
 const Header = styled.header`
   display: flex;
@@ -195,7 +196,7 @@ class Presale extends React.Component {
             )}
             <aside>
               <h4>Time until Presale</h4>
-              <time>23:13:45:45</time>
+              <Timer to="Sun, 18 Mar 2018 00:00:00 -0500" />
             </aside>
           </Header>
         </Container>
