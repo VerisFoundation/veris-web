@@ -11,11 +11,11 @@ class Timer extends React.Component {
 
   componentWillMount() {
     this.tick()
-    this.timer = window.setInterval(() => this.tick(), 1000)
+    this.timer = window && window.setInterval(() => this.tick(), 1000)
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.timer)
+    window && window.clearInterval(this.timer)
   }
 
   tick() {
