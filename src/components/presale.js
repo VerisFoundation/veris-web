@@ -226,12 +226,18 @@ class Presale extends React.Component {
                       <td>30,000,000</td>
                     </tr>
                     <tr>
-                      <th>Presale Price</th>
-                      <td>100 VRS = 1 NEO (20% bonus)</td>
+                      <th>Presale Price (20% bonus)</th>
+                      <td>
+                        1 NEO = 100 VRS<br />
+                        1 ETH = (ETH-USD/NEO-USD) * 100 VRS
+                      </td>
                     </tr>
                     <tr>
                       <th>ICO Price</th>
-                      <td>100 VRS = 1 NEO (20% bonus) 80 VRS = 1 ETH</td>
+                      <td>
+                        1 NEO = 80 VRS<br />
+                        1 ETH = (ETH-USD/NEO-USD) * 80 VRS
+                      </td>
                     </tr>
                     <tr>
                       <th>Minimum Cap</th>
@@ -240,10 +246,6 @@ class Presale extends React.Component {
                     <tr>
                       <th>Maximum Cap</th>
                       <td>90,000 ETH / 270,000 NEO</td>
-                    </tr>
-                    <tr>
-                      <th>ICO Minimum Cap</th>
-                      <td>100 VRS = 1 NEO (20% bonus)</td>
                     </tr>
                   </tbody>
                 </table>
