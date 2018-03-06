@@ -19,8 +19,13 @@ const OurTeam = styled.div`
     font-size: 2rem;
   }
 
+  h2 {
+    font-size: 2rem;
+  }
+
   aside {
     max-width: 32rem;
+    margin-bottom: 4rem;
   }
 `
 
@@ -39,7 +44,7 @@ const Team = styled.ul`
 
 const Modal = styled.div`
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: ${props => (props.active ? '#fff' : 'transparent')};
   padding: ${props => (props.active ? '3rem' : '1rem')};
   margin: 1rem;
   display: flex;
@@ -178,6 +183,12 @@ const Close = styled.div`
   cursor: pointer;
 `
 
+const CoreTeam = styled.div``
+
+const Advisors = styled.div`
+  background-color: #f7f7f9;
+`
+
 class Member extends React.Component {
   state = {
     active: false
@@ -225,85 +236,97 @@ export default () => (
           Our work results in significantly lower costs and improves the way medical providers interact with payers.
         </p>
       </aside>
-      <Team>
-        <Member name="Chris Plance" title="Founder &amp; CEO" image={imgChris}>
-          <SocialLinks>
-            <SocalLink platform="Linked In" url="http://www.linkedin.com/in/chrisplance" />
-            <SocalLink platform="Medium" url="https://medium.com/@chris.plance" />
-          </SocialLinks>
-          <p>
-            Chris is an engineer, entrepreneur, and management consultant with over 20 years experience providing
-            strategic guidance in the implementation of technology with a focus on healthcare.
-          </p>
-          <p>
-            Chris was the co-founder of DATUS in 2002, a successful management consultancy spun off to employees in
-            2012. Chris has also served as the senior strategic advisor to one of the largest non-profit providers of
-            senior living in the United States.
-          </p>
-        </Member>
-        <Member name="Eric Lawlor" title="Advisor" image={imgEric}>
-          <SocialLinks>
-            <SocalLink platform="Linked In" url="http://www.linkedin.com/in/eric-lawlor-mba-cma-6505a214" />
-            <SocalLink platform="Medium" url="https://medium.com/@ericlawlor" />
-          </SocialLinks>
-          <p>
-            Eric has over 24 years of experience in numerous business lines in the healthcare industry. This experience
-            includes over 20 years in some facet of the revenue cycle for a wide variety of provider types. These
-            provider types range from hospitals and physician practices to post acute providers.
-          </p>
-          <p>
-            Eric has personally performed all the major components of the provider side of revenue cycle in his career
-            including eligibility verification, charge entry, claim submission, claim followup, claim appeals and post
-            payment reviews. Eric has also been instrumental in the implementation of several new billing systems.
-          </p>
-        </Member>
-        <Member name="Dan Riston" title="Advisor" image={imgDan}>
-          <SocialLinks>
-            <SocalLink platform="Linked In" url="https://www.linkedin.com/in/dan-riston-8ba0b217/" />
-          </SocialLinks>
-          <p>
-            Dan has 30 years experience on the payer side of healthcare. During this time he has been primarily involved
-            with the TPA (Third Part Administration of benefits) industry. The first 12 years as CFO and COO and the
-            last 18 years as President and CEO of a national TPA. This tenure has allowed him to witness claim paying
-            from when it was just entering the computer age to where it is today.
-          </p>
-          <p>
-            Simultaneously during his healthcare career he has participated in many different efforts to improve the way
-            claims are paid. He has participated in the development of a national PPO, been President of a company that
-            developed one of the first electronic claims submission systems and, has been an advisor to numerous cost
-            containment and claims adjudication companies.
-          </p>
-        </Member>
-        <Member name="Jason L Perry" title="Technical Lead" image={imgJason}>
-          <SocialLinks>
-            <SocalLink platform="Twitter" url="https://twitter.com/ambethia" />
-            <SocalLink platform="GitHub" url="https://github.com/ambethia" />
-            <SocalLink platform="Medium" url="https://medium.com/@ambethia" />
-          </SocialLinks>
-          <p>
-            Jason is a native Floridian who started building for the web as a teen in the mid-&rsquo;90s, so he&rsquo;s
-            been a web developer for about as long as anybody. Co-founding the Tampa Ruby Brigade in 2006, Suncoast
-            Developers Guild in 2015, Jason takes pride in being a leader in the local tech community. After stints in
-            academia, startups, and as a consulting freelancer, he&rsquo;s found great joy in mentoring and sharing the
-            knowledge gained along the way. He&rsquo;s also a game development enthusiast, passionate about
-            cryptocurrency, and loves animation. Jason is a father, a skeptic, entirely too opinionated, and prefers a
-            word count in powers of two. When the world gets heavy you can find him either unbuilding LEGO&reg; sets as
-            catharsis or harnessing his power animal &mdash; the panda.
-          </p>
-        </Member>
-        <Member name="Matthew LeGrice" title="Design Lead" image={imgMatt}>
-          <SocialLinks>
-            <SocalLink platform="Website" url="http://mattehue.com/" />
-            <SocalLink platform="Dribbble" url="http://dribbble.com/Mattehue" />
-          </SocialLinks>
-          <p>
-            Matthew LeGrice is an independent designer and illustrator based in Jersey City, New Jersey. He has nearly
-            10 years of design experience working with brands small and big, helping to elevate the way they communicate
-            visually with their audiences.
-          </p>
-          <p>Some recent clients include SeatGeek, New York Rangers, and Biolite Energy.</p>
-        </Member>
-      </Team>
     </Container>
+    <CoreTeam>
+      <Container>
+        <h2>Core Team</h2>
+        <Team>
+          <Member name="Chris Plance" title="Founder &amp; CEO" image={imgChris}>
+            <SocialLinks>
+              <SocalLink platform="Linked In" url="http://www.linkedin.com/in/chrisplance" />
+              <SocalLink platform="Medium" url="https://medium.com/@chris.plance" />
+            </SocialLinks>
+            <p>
+              Chris is an engineer, entrepreneur, and management consultant with over 20 years experience providing
+              strategic guidance in the implementation of technology with a focus on healthcare.
+            </p>
+            <p>
+              Chris was the co-founder of DATUS in 2002, a successful management consultancy spun off to employees in
+              2012. Chris has also served as the senior strategic advisor to one of the largest non-profit providers of
+              senior living in the United States.
+            </p>
+          </Member>
+          <Member name="Jason L Perry" title="Technical Lead" image={imgJason}>
+            <SocialLinks>
+              <SocalLink platform="Twitter" url="https://twitter.com/ambethia" />
+              <SocalLink platform="GitHub" url="https://github.com/ambethia" />
+              <SocalLink platform="Medium" url="https://medium.com/@ambethia" />
+            </SocialLinks>
+            <p>
+              Jason is a native Floridian who started building for the web as a teen in the mid-&rsquo;90s, so
+              he&rsquo;s been a web developer for about as long as anybody. Co-founding the Tampa Ruby Brigade in 2006,
+              Suncoast Developers Guild in 2015, Jason takes pride in being a leader in the local tech community. After
+              stints in academia, startups, and as a consulting freelancer, he&rsquo;s found great joy in mentoring and
+              sharing the knowledge gained along the way. He&rsquo;s also a game development enthusiast, passionate
+              about cryptocurrency, and loves animation. Jason is a father, a skeptic, entirely too opinionated, and
+              prefers a word count in powers of two. When the world gets heavy you can find him either unbuilding
+              LEGO&reg; sets as catharsis or harnessing his power animal &mdash; the panda.
+            </p>
+          </Member>
+          <Member name="Matthew LeGrice" title="Design Lead" image={imgMatt}>
+            <SocialLinks>
+              <SocalLink platform="Website" url="http://mattehue.com/" />
+              <SocalLink platform="Dribbble" url="http://dribbble.com/Mattehue" />
+            </SocialLinks>
+            <p>
+              Matthew LeGrice is an independent designer and illustrator based in Jersey City, New Jersey. He has nearly
+              10 years of design experience working with brands small and big, helping to elevate the way they
+              communicate visually with their audiences.
+            </p>
+            <p>Some recent clients include SeatGeek, New York Rangers, and Biolite Energy.</p>
+          </Member>
+        </Team>
+      </Container>
+    </CoreTeam>
+    <Advisors>
+      <Container>
+        <h2>Advisors</h2>
+        <Team>
+          <Member name="Eric Lawlor" title="Advisor" image={imgEric}>
+            <SocialLinks>
+              <SocalLink platform="Linked In" url="http://www.linkedin.com/in/eric-lawlor-mba-cma-6505a214" />
+              <SocalLink platform="Medium" url="https://medium.com/@ericlawlor" />
+            </SocialLinks>
+            <p>
+              Eric has over 24 years of experience in numerous business lines in the healthcare industry. This
+              experience includes over 20 years in some facet of the revenue cycle for a wide variety of provider types.
+              These provider types range from hospitals and physician practices to post acute providers.
+            </p>
+            <p>
+              Eric has personally performed all the major components of the provider side of revenue cycle in his career
+              including eligibility verification, charge entry, claim submission, claim followup, claim appeals and post
+              payment reviews. Eric has also been instrumental in the implementation of several new billing systems.
+            </p>
+          </Member>
+          <Member name="Dan Riston" title="Advisor" image={imgDan}>
+            <SocialLinks>
+              <SocalLink platform="Linked In" url="https://www.linkedin.com/in/dan-riston-8ba0b217/" />
+            </SocialLinks>
+            <p>
+              Dan has 30 years experience on the payer side of healthcare. During this time he has been primarily
+              involved with the TPA (Third Part Administration of benefits) industry. The first 12 years as CFO and COO
+              and the last 18 years as President and CEO of a national TPA. This tenure has allowed him to witness claim
+              paying from when it was just entering the computer age to where it is today.
+            </p>
+            <p>
+              Simultaneously during his healthcare career he has participated in many different efforts to improve the
+              way claims are paid. He has participated in the development of a national PPO, been President of a company
+              that developed one of the first electronic claims submission systems and, has been an advisor to numerous
+              cost containment and claims adjudication companies.
+            </p>
+          </Member>
+        </Team>
+      </Container>
+    </Advisors>
   </OurTeam>
 )

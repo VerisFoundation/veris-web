@@ -206,7 +206,6 @@ class Presale extends React.Component {
             <section>
               <aside>
                 <h3>Overview</h3>
-
                 <table>
                   <tbody>
                     <tr>
@@ -226,7 +225,7 @@ class Presale extends React.Component {
                       <td>30,000,000</td>
                     </tr>
                     <tr>
-                      <th>Presale Price (20% bonus)</th>
+                      <th>Presale Price (25% bonus)</th>
                       <td>
                         1 NEO = 100 VRS<br />
                         1 ETH = (ETH-USD/NEO-USD) * 100 VRS
