@@ -362,6 +362,21 @@ export default () => (
             <SocialLinks>
               <SocalLink platform="Linked In" url="https://www.linkedin.com/in/scott-harrison-74b40b25/" />
             </SocialLinks>
+            <p>
+              Scott Harrison has had a 40 year career in healthcare and senior living. He has had responsibility for
+              leadership in hospitals in Illinois and Iowa, served on a team to merge two hospitals and was in charge of
+              all operations of a 650 bed medical center. In addition, he was a faculty member of a family practice
+              residency training program. He also served as President of Iowa’s first provider owned managed care
+              program, providing health benefits to employers throughout the state. The program was also licensed in
+              South Dakota and Nebraska. Finally, Scott was CEO of a senior housing company that owned and operated 12
+              retirement communities in seven states.
+            </p>
+            <p>
+              Scott holds a Master’s Degree in Hospital and Healthcare Administration from the University of Iowa. He
+              successfully completed the Mercy-Harvard leadership training program and was a member of the Mercy-Mayo
+              Family Practice Liaison Committee. He has retired and now lives in northern Michigan where he volunteers,
+              consults on occasion and visits grandchildren throughout the country.
+            </p>
           </Member>
 
           <Member name="John Paul" title="Advisor" image={imgJohn}>
