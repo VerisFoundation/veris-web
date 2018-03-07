@@ -9,12 +9,14 @@ import SectionHeader from './sectionHeader'
 import imgChris from '../images/img_chris@2x.png'
 import imgEric from '../images/img_eric@2x.png'
 import imgDan from '../images/img_dan@2x.png'
-import imgJason from '../images/img_Jason@2x.png'
+import imgJason from '../images/img_jason@2x.png'
 import imgMatt from '../images/img_matt@2x.png'
+import imgScott from '../images/img_scott@2x.png'
+import imgJohn from '../images/img_john@2x.png'
+import imgBrian from '../images/img_brian@2x.png'
+import imgSadijah from '../images/img_sadijah@2x.png'
 
 const OurTeam = styled.div`
-  margin-bottom: 6rem;
-
   h3 {
     font-size: 2rem;
   }
@@ -25,7 +27,6 @@ const OurTeam = styled.div`
 
   aside {
     max-width: 32rem;
-    margin-bottom: 4rem;
   }
 `
 
@@ -51,7 +52,6 @@ const Modal = styled.div`
   position: relative;
   max-width: 960px;
   max-height: 80vh;
-  overflow-y: scroll;
 
   aside {
     flex: 1;
@@ -61,6 +61,7 @@ const Modal = styled.div`
 
   section {
     flex: 2;
+    overflow-y: auto;
   }
 
   @media (max-width: 540px) {
@@ -183,9 +184,13 @@ const Close = styled.div`
   cursor: pointer;
 `
 
-const CoreTeam = styled.div``
+const CoreTeam = styled.div`
+  h2 {
+    padding: 2rem;
+  }
+`
 
-const Advisors = styled.div`
+const Advisors = styled(CoreTeam)`
   background-color: #f7f7f9;
 `
 
@@ -269,8 +274,8 @@ export default () => (
               stints in academia, startups, and as a consulting freelancer, he&rsquo;s found great joy in mentoring and
               sharing the knowledge gained along the way. He&rsquo;s also a game development enthusiast, passionate
               about cryptocurrency, and loves animation. Jason is a father, a skeptic, entirely too opinionated, and
-              prefers a word count in powers of two. When the world gets heavy you can find him either unbuilding
-              LEGO&reg; sets as catharsis or harnessing his power animal &mdash; the panda.
+              prefers word counts in powers of two. When the world gets heavy you can find him either unbuilding
+              LEGO&reg; sets as catharsis or harnessing his power animal, the panda.
             </p>
           </Member>
           <Member name="Matthew LeGrice" title="Design Lead" image={imgMatt}>
@@ -323,6 +328,53 @@ export default () => (
               way claims are paid. He has participated in the development of a national PPO, been President of a company
               that developed one of the first electronic claims submission systems and, has been an advisor to numerous
               cost containment and claims adjudication companies.
+            </p>
+          </Member>
+          <Member name="Brian Kazienko MD, FACC" title="Advisor" image={imgBrian}>
+            <SocialLinks>
+              <SocalLink platform="Linked In" url="https://www.linkedin.com/in/brian-kazienko-5687376/" />
+            </SocialLinks>
+          </Member>
+          <Member name="Dr. Sajidah Husain, MD, MPH" title="Advisor" image={imgSadijah}>
+            <SocialLinks>
+              <SocalLink platform="Linked In" url="" />
+            </SocialLinks>
+            <p>
+              Dr. Sajidah Husain, MD, MPH, is a physician executive with over seventeen years of experience working in
+              managed care organizations, most recently for Anthem, a fortune 50 company, as a Regional Vice President
+              and Medical Director. In her role as the chief medical officer for the healthplan, Dr. Husain oversaw the
+              design and implementation of programs to manage the health care needs of the membership and served as the
+              principal medical policy advisor.
+            </p>
+            <p>
+              Dr. Husain holds a Masters degree in public health from the School of Public Health, University of
+              Medicine and Dentistry of New Jersey/Rutgers University. In addition she completed a post-doctoral primary
+              care/health services research fellowship at the Department of Family Medicine at the Robert Wood Johnson
+              Medical School/New Jersey. She is currently completing her executive MBA program at Rutgers school of
+              business administration.
+            </p>
+            <p>
+              Dr. Husain continues to be involved in active medical practice as a volunteer worker in a clinic serving
+              the uninsured in New Jersey.
+            </p>
+          </Member>
+          <Member name="Scott Harrison" title="Advisor" image={imgScott}>
+            <SocialLinks>
+              <SocalLink platform="Linked In" url="https://www.linkedin.com/in/scott-harrison-74b40b25/" />
+            </SocialLinks>
+          </Member>
+
+          <Member name="John Paul" title="Advisor" image={imgJohn}>
+            <p>
+              Mr. John W. Paul served as an Executive Vice President, Chief Financial Officer and Chief Operating
+              Officer of the University of Pittsburgh Medical Center (UPMC). Mr. Paul played a key role in executing
+              major expansion as well as consolidation strategies. Mr. Paul serves as a Director of Brim Healthcare,
+              Inc. (AKA HealthTech Management Services, Inc.). He also serves on the Board of Healthcare Waste
+              Solutions, LLC of Cincinnati, Ohio. He is known for his business acumen and creating win/win scenarios
+              among key groups and stakeholders. He has been growth-focused and has demonstrated an unusual ability to
+              achieve a healthy and aggressive balance between risk taking and rewards. Mr. Paul has MBA, with honors,
+              from the University of Pittsburgh, Joseph M. Katz School of Business. He holds Bachelor of Science degree
+              in Business from Indiana University of Pennsylvania.
             </p>
           </Member>
         </Team>
