@@ -96,7 +96,7 @@ export default () => (
       </aside>
       <Countdown>
         <h2>VRS Presale</h2>
-        <Timer to="Sun, 19 Mar 2018 12:00:00 -0400" />
+        <Timer to="Mon, 19 Mar 2018 12:00:00 -0400" />
         <ButtonLink to="/presale">Learn More</ButtonLink>
       </Countdown>
     </Section>
