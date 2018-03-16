@@ -334,6 +334,13 @@ export default () => (
             <SocialLinks>
               <SocalLink platform="Linked In" url="https://www.linkedin.com/in/brian-kazienko-5687376/" />
             </SocialLinks>
+            <p>
+              Dr. Kazienko is a board-certified cardiologist with 13 years of clinical practice. He has experience in
+              various models such as hospital employed and private practice, and has an innate understanding of the
+              provider side of healthcare finances. Dr. Kazienko has been involved in helping hospitals improved their
+              quality measures and reimbursement since they early days of his practice and currently serves as the
+              Cardiology QI liaison for a major health system.
+            </p>
           </Member>
           <Member name="Dr. Sajidah Husain, MD, MPH" title="Advisor" image={imgSadijah}>
             <SocialLinks>
