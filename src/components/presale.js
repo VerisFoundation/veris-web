@@ -196,7 +196,7 @@ class Presale extends React.Component {
             )}
             <aside>
               <h4>Time until Presale</h4>
-              <Timer to="Sun, 18 Mar 2018 00:00:00 -0500" />
+              <Timer to="Sun, 19 Mar 2018 12:00:00 -0400" />
             </aside>
           </Header>
         </Container>
