@@ -257,6 +257,9 @@ class Nav extends React.Component {
           <NavLink>
             <a href="https://medium.com/verisfoundation">Blog</a>
           </NavLink>
+          <NavLink>
+            <a href="https://github.com/VerisFoundation/light-wallet/releases/tag/0.2.0">Wallet</a>
+          </NavLink>
         </HorizontalNav>
         <HorizontalNav>
           <NavLink>

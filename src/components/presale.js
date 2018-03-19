@@ -39,6 +39,11 @@ const Header = styled.header`
     letter-spacing: 0.2rem;
   }
 
+  a:link,
+  a:visited {
+    color: #278cd6;
+  }
+
   form {
     border: thin solid #278cd6;
     border-radius: 3rem;
