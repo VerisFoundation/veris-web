@@ -187,7 +187,12 @@ class Presale extends React.Component {
             ) : (
               <section>
                 <h3>The VRS Presale opens on Monday, March 19.</h3>
-                <p>We will be releasing our coin at 12:00p EST. Sign up below to be reminded.</p>
+                <p>
+                  <a href="https://ico.verisfoundation.com/">
+                    To purchase VRS create your wallet and exchange NEO or ETH for VRS.
+                  </a>
+                </p>
+                <p>Stay informed about Veris:</p>
                 <form action="" onSubmit={this._submit}>
                   <input required type="email" placeholder="Enter Your Email" onChange={this._change} />
                   <button type="submit">Submit</button>

@@ -173,6 +173,5 @@ export default () => (
         </aside>
       </SmartContracts>
     </SmartContractWrapper>
-    <Crowdsale />
   </Works>
 )

@@ -44,7 +44,6 @@ export default () => (
     <Problem />
     <Solution />
     <Platform />
-    <Crowdsale />
     <Questions>
       <h3>Have any questions?</h3>
       <ButtonLink to="/faq">Read our FAQ</ButtonLink>

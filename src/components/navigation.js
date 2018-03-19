@@ -299,6 +299,15 @@ class Nav extends React.Component {
             >
               Blog
             </NavItem>
+            <NavItem
+              onClick={() => {
+                window.location = 'https://github.com/VerisFoundation/light-wallet/releases/tag/0.2.0'
+                this.closeMenu
+              }}
+              to="#"
+            >
+              Wallet
+            </NavItem>
             <NavItem onClick={this.closeMenu} to="/presale">
               Presale
             </NavItem>
