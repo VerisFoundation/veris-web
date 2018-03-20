@@ -12,7 +12,7 @@ const Header = styled.header`
   margin-top: 4rem;
 
   section {
-    max-width: 420px;
+    ${'' /* max-width: 420px; */};
   }
 
   p {
@@ -41,7 +41,20 @@ const Header = styled.header`
 
   a:link,
   a:visited {
-    color: #278cd6;
+    background-color: #278cd6;
+    color: #fff;
+    border: none;
+    border-radius: 48px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 12px 24px;
+    letter-spacing: 0.1rem;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
   }
 
   form {
@@ -191,11 +204,12 @@ class Presale extends React.Component {
               </div>
             ) : (
               <section>
-                <h3>The VRS Presale opens on Monday, March 19.</h3>
+                <h3>
+                  The presale is open until March 26<sup>th</sup>.
+                </h3>
+                <p>To purchase VRS, create your wallet and exchange NEO or ETH for VRS:</p>
                 <p>
-                  <a href="https://ico.verisfoundation.com/">
-                    To purchase VRS create your wallet and exchange NEO or ETH for VRS.
-                  </a>
+                  <a href="https://ico.verisfoundation.com/">Get Started</a>
                 </p>
                 <p>Stay informed about Veris:</p>
                 <form action="" onSubmit={this._submit}>
@@ -204,10 +218,6 @@ class Presale extends React.Component {
                 </form>
               </section>
             )}
-            <aside>
-              <h4>Time until Presale</h4>
-              <Timer to="Mon, 19 Mar 2018 12:00:00 -0400" />
-            </aside>
           </Header>
         </Container>
         <CrowdsaleInfo>
