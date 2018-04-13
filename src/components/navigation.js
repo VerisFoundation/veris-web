@@ -248,6 +248,7 @@ class Nav extends React.Component {
           </NavMenu>
           <NavMenu label="Company">
             <NavItem to="/about">About</NavItem>
+            <NavItem to="/press">Press</NavItem>
             <NavItem to="/team">Team</NavItem>
             <NavItem to="/contact">Contact</NavItem>
           </NavMenu>
