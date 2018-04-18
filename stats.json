@@ -1,12 +1,12 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-ef3887fd3fb6a9f03c0f.js",
-      "component---src-pages-index-js-ef3887fd3fb6a9f03c0f.js.map"
+      "component---src-pages-index-js-773bdf18e1f8316e524d.js",
+      "component---src-pages-index-js-773bdf18e1f8316e524d.js.map"
     ],
     "component---src-pages-works-js": [
-      "component---src-pages-works-js-842999ddea1144aa82e9.js",
-      "component---src-pages-works-js-842999ddea1144aa82e9.js.map"
+      "component---src-pages-works-js-dfba321071c69006143a.js",
+      "component---src-pages-works-js-dfba321071c69006143a.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -25,12 +25,12 @@
       "component---src-pages-faq-js-a31d8131732066e52b22.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-bc94ecdf211295397e5c.js",
-      "component---src-layouts-index-js-bc94ecdf211295397e5c.js.map"
+      "component---src-layouts-index-js-045c8e96e6626603633d.js",
+      "component---src-layouts-index-js-045c8e96e6626603633d.js.map"
     ],
     "component---src-pages-presale-js": [
-      "component---src-pages-presale-js-d8205e172310659f0a3c.js",
-      "component---src-pages-presale-js-d8205e172310659f0a3c.js.map"
+      "component---src-pages-presale-js-b645cf90cf65c99d0ece.js",
+      "component---src-pages-presale-js-b645cf90cf65c99d0ece.js.map"
     ],
     "path---presale": [
       "path---presale-a0e39f21c11f6a62c5ab.js",
@@ -53,8 +53,8 @@
       "commons-1364a5fc4bae312ff48e.js.map"
     ],
     "component---src-pages-press-js": [
-      "component---src-pages-press-js-0c8db4227b075eb0a17b.js",
-      "component---src-pages-press-js-0c8db4227b075eb0a17b.js.map"
+      "component---src-pages-press-js-7249ad3b6c7fc17bbe04.js",
+      "component---src-pages-press-js-7249ad3b6c7fc17bbe04.js.map"
     ],
     "path---contact": [
       "path---contact-a0e39f21c11f6a62c5ab.js",
@@ -65,8 +65,8 @@
       "path---team-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-ace387aad7d788567788.js",
-      "app-ace387aad7d788567788.js.map"
+      "app-6910838e1c03055ef5f9.js",
+      "app-6910838e1c03055ef5f9.js.map"
     ],
     "path---press": [
       "path---press-a0e39f21c11f6a62c5ab.js",
